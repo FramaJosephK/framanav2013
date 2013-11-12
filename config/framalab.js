@@ -1,8 +1,5 @@
 var f$_config = 'local';
 
-// Popup de don
-var f$_modal_don_liendl = 'a[href*="files.framakey.org"]';
-
 // Alertes
 var f$_alert_type = 'don';
 
@@ -22,5 +19,3 @@ var f$_alert_text = '<div style="margin:0 auto; max-width:800px; text-align:just
 					'<p>Aidez-nous à nous libérer de Google (pubs, analytics, gmail…) et nous vous proposerons davantage d\'alternatives libres et respectueuses comme celles du « Framacloud » (Framapad, Framadate, Framacalc…)</p>'+
 					'<p style="font-weight:bold; text-align:center">Merci de votre soutien <a href="http://soutenir.framasoft.org/?f=bandeau2">soutenir.framasoft.org</a></p></div>';
 }
-
-var f$_donate = false;
