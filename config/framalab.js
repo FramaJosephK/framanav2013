@@ -1,7 +1,7 @@
 var f$_config = 'local';
 
 // Alertes
-var f$_alert_type = 'info';
+var f$_alert_type = 'warning';
 
 var f$_rand = Math.random();
 if (f$_rand < .5){
