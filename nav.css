@@ -1,0 +1,125 @@
+#framanav,
+#framanav .dropdown-menu li {
+	font-size: 12px !important;
+	font-family: "DejaVu Sans",Verdana,Geneva,sans-serif !important;
+}
+
+#framanav {
+	min-height:30px !important; 				/*50px sur BS */
+	margin-bottom:0;
+}
+
+#framanav img {margin:0}
+
+#framanav .navbar-brand,
+#framanav .navbar-nav > li > a {
+	padding-top:10px !important; 				/*15px sur BS*/
+	padding-bottom:10px !important;
+}
+
+#framanav .nav-container {
+	width:950px;								/*1130px; avec moteur de recherche */
+	margin:auto;
+}
+
+#framanav .popover { 
+	width : 300px;	
+}
+#framanav .popover a{ 
+	color:rgb(51,51,51);
+	text-decoration:none;
+}
+#framanav .popover.right { 
+	margin-top:25px;
+}
+#framanav .popover.right .arrow { 
+	margin-top:-35px;
+}
+
+#framanav .popover.bottom { 
+	margin-left:-100px;
+}
+#framanav .popover.bottom .arrow { 
+	margin-left:100px;
+}
+
+
+#modal-alert .modal-header,
+#modal-soutenir .modal-header,
+#modal-soutenir .modal-footer {
+	padding-top:0;
+	padding-bottom:0;
+}
+#modal-alert .modal-body
+#modal-soutenir .modal-body {
+	padding-bottom:0;
+}
+/*
+.navbar-search {
+    margin-bottom: 0;
+    margin-top: 5px;
+    margin-left:20px;
+}
+
+.navbar-search .search-query {
+    border-radius: 5px 5px 5px 5px;
+    font-size: 13px;
+    font-weight: normal;
+    line-height: 1;
+    margin-bottom: 0;
+    padding: 3px 2em;
+	margin-top: 5px;
+	width:150px;
+}*/
+
+a#framanav_donation {
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	display: block;
+	height: 63px;
+	width: 63px;
+	background: url('./img/don.png') no-repeat;
+	z-index : 99;
+}
+a#framanav_donation:hover {filter:alpha(opacity=80);-moz-opacity:0.8;-khtml-opacity: 0.8;opacity: 0.8;}
+
+#framanav .navbar-brand { font-weight: bold; padding-left:50px}
+
+#framanav .nav-brand img {border:none;}
+
+#framanav .popover-title { font-weight: bold; }
+
+
+
+#suivez-nous {
+	padding-left: 27px;
+	background: url('./img/contact.png') no-repeat scroll -5px 10px transparent;
+}
+
+.modal-backdrop {
+    z-index: 1029 !important;
+}
+
+/* --- on s'assure on a bien une nav collée en haut en cas de petit écran --- */
+@media (max-width: 979px) {
+    body {
+            margin-top: 0px !important;
+    }
+}
+
+.navbar-toggle {padding: 4px 6px !important;}
+
+#nav-alert.alert-don {
+    color: black;
+    background-color: rgb(255, 201, 0);
+    border-color: black;
+}
+
+#nav-alert.alert {
+	padding:10px;
+	margin-bottom:0;
+}
+#nav-alert.alert p {
+	margin-bottom:5px;
+}
