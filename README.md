@@ -21,7 +21,7 @@ Prendre modèle sur config/config.js pour connaître les paramètres à personna
 ```HTML
 	<script src="/nav/nav.js" id="nav_js" type="text/javascript"></script>
 ```
-** ne pas oublier id="nav_js" **
+**ne pas oublier id="nav_js"**
  
    b) Ajouter jquery.min.js et bootstrap.min.js avant si nécessaire pour le bon fonctionnement du site
 ```HTML
