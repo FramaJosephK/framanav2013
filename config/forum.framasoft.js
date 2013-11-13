@@ -1,6 +1,6 @@
 var f$_config = 'local';
 
-var f$_css_position = 'end';	
+/*var f$_css_position = 'end';	
 /*
 // Alertes
 var f$_alert_type = 'don';
