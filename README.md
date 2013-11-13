@@ -17,7 +17,7 @@ Installation
 ```
 Prendre modèle sur config/config.js pour connaître les paramètres à personnalisables
 
-3. a) Ajouter le script nav.js dans le <head> du site où la nav est requise :
+3. a) Ajouter le script nav.js dans le `<head>` du site où la nav est requise :
 ```HTML
 	<script src="/nav/nav.js" id="nav_js" type="text/javascript"></script>
 ```

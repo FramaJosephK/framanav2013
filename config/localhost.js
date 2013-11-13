@@ -13,3 +13,5 @@ var f$_alert_text = '<div style="margin:0 auto; max-width:800px; text-align:just
 					'<p style="font-weight:bold; text-align:center">Suivez ce lien pour <a href="http://soutenir.framasoft.org/?f=bandeau">faire un don</a></p></div>';
 
 var f$_donate = true;
+
+/* Juste pour test */
