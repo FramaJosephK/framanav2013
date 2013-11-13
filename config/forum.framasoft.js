@@ -1,6 +1,8 @@
 var f$_config = 'local';
 
-var f$_css_position = 'end';	
+var f$_css_position = 'end';
+
+var f$_jquery = 'fQuery';
 /*
 // Alertes
 var f$_alert_type = 'don';
