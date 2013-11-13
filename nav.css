@@ -2,6 +2,7 @@
 #framanav .dropdown-menu li {
 	font-size: 12px !important;
 	font-family: "DejaVu Sans",Verdana,Geneva,sans-serif !important;
+	text-align:justify;
 }
 
 #framanav {
@@ -101,7 +102,7 @@ a#framanav_donation:hover {filter:alpha(opacity=80);-moz-opacity:0.8;-khtml-opac
     z-index: 1029 !important;
 }
 
-/* --- on s'assure on a bien une nav collée en haut en cas de petit écran --- */
+/* --- on s'assure on a bien une nav collï¿½e en haut en cas de petit ï¿½cran --- */
 @media (max-width: 979px) {
     body {
             margin-top: 0px !important;
