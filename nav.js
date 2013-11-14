@@ -403,6 +403,7 @@ function f$_loadScript(url, callback, forceCallback) {
 		var e = document.createElement("script");
 		e.src = url;
 		e.type = "text/javascript";
+		e.charset ="utf-8";
 		if (/msie/i.test(navigator.userAgent) && !/opera/i.test(navigator.userAgent)) {
 		// IE
 		e.onreadystatechange = function(){
