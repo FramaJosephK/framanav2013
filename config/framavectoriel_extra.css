@@ -1,0 +1,19 @@
+*, *:before, *:after {
+	-webkit-box-sizing: content-box !important;
+	-moz-box-sizing: content-box !important;
+	box-sizing: content-box !important;
+}
+
+#workarea, #sidepanel, tools_left {
+  top:125px;
+}
+#main-button {
+  top:54px;
+}
+#tools_top {
+  top:52px;
+}
+
+#svg_source_container {
+  top:80px;
+}
