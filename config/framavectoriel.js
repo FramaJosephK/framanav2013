@@ -2,8 +2,6 @@ var f$_config = 'local';
 
 var f$_jquery = 'fQuery';
 
-var f$_css_position = 'end';
-
 var f$_url = window.location.href;
 if(f$_url.indexOf('svg-editor') > -1) {
 // Si on n'est dans svg-editor
