@@ -4,20 +4,32 @@
 	box-sizing: content-box !important;
 }
 
+/* + 50 px partout */
 #workarea, #sidepanels, #tools_left {
-  top:125px !important;
+  	top:125px !important;
 }
 #main_button {
-  top:54px !important;
+	  top:54px !important;
 }
 #tools_top {
-  top:52px !important;
+  	top:52px !important;
 }
 
 #svg_source_container {
-  top:80px !important;
+  	top:80px !important;
 }
 
+#tools_rect {
+  	top:223px;
+}
+#tools_ellipse {
+	top:255px;
+}
+#tools_line {
+	top:191px;
+}
+
+/* Fix menu nav */
 #framanav .dropdown-menu {
 	padding : 5px 0px !important;
 	left:0 !important;
