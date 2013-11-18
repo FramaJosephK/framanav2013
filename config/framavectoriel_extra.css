@@ -5,15 +5,15 @@
 }
 
 #workarea, #sidepanel, tools_left {
-  top:125px;
+  top:125px !important;
 }
 #main-button {
-  top:54px;
+  top:54px !important;
 }
 #tools_top {
-  top:52px;
+  top:52px !important;
 }
 
 #svg_source_container {
-  top:80px;
+  top:80px !important;
 }
