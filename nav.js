@@ -51,7 +51,7 @@ var f$_start_local_config = function() {
 				f$_start_jquery();
 			}				
 		} else {
-			if (window.fQuery === undefined || window.fQuery.fn.fquery !== '1.10.2') {
+			if (window.fQuery === undefined) {
 				console.log('fQuery chargé par AJAX - Mode isolé');
 				f$_loadScript(f$_nav+'lib/jquery/fquery.min.js', f$_start_jquery);
 			} else {
