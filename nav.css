@@ -5,6 +5,13 @@
 	text-align:justify;
 }
 
+
+#framanav .dropdown:nth-child(1) .dropdown-menu li a:hover {background-color: #0C5B7A;} /* bleu logiciel */
+#framanav .dropdown:nth-child(2) .dropdown-menu li a:hover {background-color: #CC2D18;} /* rouge culture */
+#framanav .dropdown:nth-child(3) .dropdown-menu li a:hover {background-color: #9BAE5F;} /* vert services */
+#framanav .dropdown:nth-child(4) .dropdown-menu li a:hover {background-color: #DBA306;} /* jaune en vrac */
+#framanav .dropdown:nth-child(5) .dropdown-menu li a:hover {background-color: #6A5687;} /* violet nous suivre */
+
 #framanav {
 	min-height:30px !important; 				/*50px sur BS */
 	margin-bottom:0;
