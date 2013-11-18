@@ -4,7 +4,8 @@ var f$_jquery = 'fQuery';
 
 var f$_css_position = 'end';
 
-if(window.location.indexOf('svg-editor') > -1) {
+f$_url = window.location;
+if(f$_url.indexOf('svg-editor') > -1) {
 // Si on n'est dans svg-editor
 var f$_nav_extra_css = true;
 } else {
