@@ -6,6 +6,7 @@ var f$_url = window.location.href;
 if(f$_url.indexOf('svg-editor') > -1) {
 // Si on n'est dans svg-editor
 var f$_nav_extra_css = true;
+var f$_donate = false;
 } else {
 // Si on est sur la page d'accueil
 var f$_alert_type = 'info'; 
