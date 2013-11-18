@@ -4,10 +4,10 @@
 	box-sizing: content-box !important;
 }
 
-#workarea, #sidepanel, #tools_left {
+#workarea, #sidepanels, #tools_left {
   top:125px !important;
 }
-#main-button {
+#main_button {
   top:54px !important;
 }
 #tools_top {
@@ -16,4 +16,16 @@
 
 #svg_source_container {
   top:80px !important;
+}
+
+#framanav .dropdown-menu {
+	padding : 5px 0px !important;
+	left:0 !important;
+	top:100% !important;
+}
+#framanav .dropdown-menu li {
+	width:auto;
+	padding:0;
+	background-color:#fff;
+	border:none;
 }
