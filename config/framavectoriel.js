@@ -1,6 +1,6 @@
 var f$_config = 'local';
 
-var f$_css_position = 'start';
+var f$_jquery = 'fQuery';
 
 var f$_alert_type = 'info'; 
 var f$_alert_text = '<p style="text-align:center"><strong>Attention</strong> Le logiciel ne fonctionne malheureusement plus correctement sur Firefox à partir de la version 23.</p>';
