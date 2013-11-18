@@ -10,7 +10,7 @@ var f$_donate = false;
 } else {
 // Si on est sur la page d'accueil
 var f$_alert_type = 'info'; 
-var f$_alert_text = '<p style="text-align:center"><strong>Information</strong> Framavectoriel a été mis à jour (<a href="https://code.google.com/p/svg-edit/">version 2.6 de SVG-Edit</a>) et fonctionne de nouveau avec les versions récentes de Firefox.</p>';
+var f$_alert_text = '<p style="text-align:center"><strong>Information</strong> : Framavectoriel a été mis à jour (<a href="https://code.google.com/p/svg-edit/">version 2.6 de SVG-Edit</a>) et fonctionne de nouveau avec les versions récentes de Firefox.</p>';
 }
 
 var f$_modal_don_txtdl1 = 'd\'utiliser';
