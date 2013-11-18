@@ -51,8 +51,13 @@ var f$_start_local_config = function() {
 				f$_start_jquery();
 			}				
 		} else {
-			console.log('fQuery chargé par AJAX - Mode isolé');
-			f$_loadScript(f$_nav+'lib/jquery/fquery.min.js', f$_start_jquery);
+			if (window.fQuery === undefined || window.fQuery.fn.fquery !== '1.10.2') {
+				console.log('fQuery chargé par AJAX - Mode isolé');
+				f$_loadScript(f$_nav+'lib/jquery/fquery.min.js', f$_start_jquery);
+			} else {
+				console.log('fQuery chargé par HTML');
+				f$_start_jquery();
+			}
 		}
 	} else {
 		console.error(f$_site+'.js');
@@ -68,7 +73,7 @@ function f$_start_jquery() {
 	if (f$_jquery == 'jQuery') {
 		var f$ = (f$_jquery_noconflict) ? jQuery.noConflict() : jQuery;
 	} else {
-		var f$ = fQuery;
+		var f$ = (f$_jquery_noconflict) ? fQuery.noConflict() : fQuery;
 	}
 	
 	f$(document).ready(function() {
