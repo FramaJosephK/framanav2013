@@ -4,7 +4,7 @@
 	box-sizing: content-box !important;
 }
 
-#workarea, #sidepanel, tools_left {
+#workarea, #sidepanel, #tools_left {
   top:125px !important;
 }
 #main-button {
