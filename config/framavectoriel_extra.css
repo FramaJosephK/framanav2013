@@ -20,13 +20,13 @@
 }
 
 #tools_rect {
-  	top:223px;
+  	top:223px !important;
 }
 #tools_ellipse {
-	top:255px;
+	top:255px !important;
 }
 #tools_line {
-	top:191px;
+	top:191px !important;
 }
 
 /* Fix menu nav */
