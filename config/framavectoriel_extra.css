@@ -6,7 +6,7 @@
 
 /* + 50 px partout */
 #workarea, #sidepanels, #tools_left {
-  	top:125px !important;
+  	top:90px !important;
 }
 #main_button {
 	  top:54px !important;
@@ -20,15 +20,20 @@
 }
 
 #tools_rect {
-  	top:223px !important;
+  	top:192px !important;
 }
 #tools_ellipse {
-	top:255px !important;
+	top:226px !important;
 }
 #tools_line {
-	top:191px !important;
+	top:158px !important;
 }
-
+#tools_shapelib {
+	top:294px !important;
+}
+#ruler_corner,#ruler_x,#ruler_y {
+	top:91px !important;
+}
 /* Fix menu nav */
 #framanav .dropdown-menu {
 	padding : 5px 0px !important;
