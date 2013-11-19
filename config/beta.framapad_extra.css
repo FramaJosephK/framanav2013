@@ -5,8 +5,8 @@
 }
 
 editorcontainerbox {
-  top:40px;
+  top:40px !important;
 }
 editorcontainer {
-  top:39px;
+  top:39px !important;
 }
