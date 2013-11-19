@@ -5,3 +5,9 @@ h2 {
 #framadon #accordion a.section {
   font-size: 120% !important;
 }
+
+*, *:before, *:after {
+        -webkit-box-sizing: content-box !important;
+        -moz-box-sizing: content-box !important;
+        box-sizing: content-box !important;
+}
