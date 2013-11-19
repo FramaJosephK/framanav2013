@@ -1,0 +1,12 @@
+*, *:before, *:after {
+        -webkit-box-sizing: content-box !important;
+        -moz-box-sizing: content-box !important;
+        box-sizing: content-box !important;
+}
+
+editorcontainerbox {
+  top:40px;
+}
+editorcontainer {
+  top:39px;
+}
