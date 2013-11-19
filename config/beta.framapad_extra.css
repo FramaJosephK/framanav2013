@@ -7,7 +7,7 @@
 #editorcontainerbox {
         top:42px !important;
 }
-#embed,#connectivity,#settings,#importexport {
+#embed,#connectivity,#settings,#importexport,#users {
         top:78px !important;
 }
 .stickyChat {
@@ -16,4 +16,11 @@
 
 .toolbar ul li select {
         height:20px !important;
+}
+#helpbubbleslink > .buttonicon {
+        font-size: 18px !important;
+}
+
+.toolbar ul li a .buttonicon {
+        top: -2px !important;
 }
