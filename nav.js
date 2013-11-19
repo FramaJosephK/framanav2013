@@ -78,7 +78,6 @@ function f$_start_jquery() {
 	
 	f$(document).ready(function() {
 		// On charge d'abord le code HTML
-	console.log(f$('#framanav').html());
 		f$.ajax({
 			url: f$_nav+'nav.html',
 			cache: f$_cache
