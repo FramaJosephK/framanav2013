@@ -2,7 +2,7 @@ var f$_config = 'local';
 
 var f$_jquery = 'fQuery';
 
-var f$_css_position = 'next';
+//var f$_css_position = 'next';
 
 var f$_donate = false;
 
