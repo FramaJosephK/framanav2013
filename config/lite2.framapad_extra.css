@@ -27,6 +27,7 @@
 
 .popup label {
         margin-bottom:0px;
+        font-weight:normal;
 }
 .popup input[type="text"] {
         -webkit-box-sizing: border-box !important;
