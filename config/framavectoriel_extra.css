@@ -6,7 +6,7 @@
 
 /* + 50 px partout */
 #workarea, #sidepanels, #tools_left {
-  	top:100px !important;
+  	top:110px !important;
 }
 #main_button {
 	  top:44px !important;
@@ -20,16 +20,16 @@
 }
 
 #tools_rect {
-  	top:2022px !important;
+  	top:212px !important;
 }
 #tools_ellipse {
-	top:236px !important;
+	top:246px !important;
 }
 #tools_line {
-	top:168px !important;
+	top:178px !important;
 }
 #tools_shapelib {
-	top:304px !important;
+	top:314px !important;
 }
 #ruler_corner,#ruler_x,#ruler_y {
 	top:111px !important;
