@@ -5,7 +5,11 @@ var f$_jquery = 'fQuery';
 var f$_url = window.location.href;
 if(f$_url.indexOf('svg-editor') > -1) {
 // Si on n'est dans svg-editor
-  var f$_nav_extra_css = true;
+  if (f$_not_in_frame) {
+    var f$_nav_extra_css = true;
+  } else {
+     var f$_bootstrap_css = false;
+  }
 
 // Force la désactivation des fenêtres modales, du bandeau et du macaron
   var f$_alert_text = '';
