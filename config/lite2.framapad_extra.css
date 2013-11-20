@@ -24,3 +24,17 @@
 .toolbar ul li a .buttonicon {
         top: -2px !important;
 }
+
+.popup label {
+        margin-bottom:0px;
+}
+.popup input[type="text"] {
+        -webkit-box-sizing: border-box !important;
+        -moz-box-sizing: border-box !important;
+        box-sizing: border-box !important;      
+}
+
+.popup h1, .popup h2 {
+        margin-top:12px;
+        margin-bottom:12px;
+}
