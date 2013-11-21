@@ -28,7 +28,7 @@ var f$_modal_don_cookie = 3*24*60*60*1000;			// durée d'expiration du cookie en
 var f$_alert_type = 'don'; 						// warning = jaune ; danger = rouge ; info = bleu ; success = vert
 var f$_alert_cookie = 7*24*60*60*1000;				// durée d'expiration du cookie en milliseconde
 var f$_alert_text = '<div style="margin:0 auto; max-width:800px; text-align:justify"><p style="font-weight:bold">Framasoft - Campagne 2013 - « Moins de Google / Plus de Libre »</p>'+
-	'<p>Framasoft s\'efforce de faire connaître et promouvoir le « Libre » depuis 12 ans.'+
+	'<p>Framasoft s\'efforce de faire connaître et promouvoir le « Libre » depuis 12 ans. '+
 	'Nous poursuivons cet objectif d\'éducation populaire avec plus d\'une vingtaine de projets menés par une communauté de bénévoles soutenue par une association qui compte 3 salariés.</p>'+
         '<p>Avec votre don (défiscalisable) vous nous permettez de poursuivre ces actions.</p>'+
         '<p>Aidez-nous à proposer ensemble davantage d\'alternatives libres et loyales comme celles du « Framacloud » (Framapad, Framadate, Framacalc…)</p>'+
