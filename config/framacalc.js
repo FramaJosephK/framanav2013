@@ -8,6 +8,7 @@ if(f$_url.indexOf('framacalc.org/_start') > -1) {
  var f$_modal_don_liendl = 'a.btn-large[href*="/_new"]';
  
 } else {
+ var f$_jquery ='fQuery';
 // Si on n'est dans ethercalc
   if (f$_not_in_frame) {
     var f$_nav_extra_css = true;
