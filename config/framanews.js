@@ -1,11 +1,10 @@
 var f$_config = 'local';
 
-var f$_jquery = 'fQuery';
-
 var f$_url = window.location.href;
 if(f$_url.indexOf('framanews.org/ttrss') > -1) {
 // Si on n'est dans ttrss
 //  var f$_nav_extra_css = true;
+//  var f$_jquery = 'fQuery';
 
 // Force la désactivation des fenêtres modales, du bandeau et du macaron
   var f$_alert_text = '';
