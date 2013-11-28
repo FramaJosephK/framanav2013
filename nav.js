@@ -305,7 +305,6 @@ function f$_start_jquery() {
 	});
 }
 
-*/
 /************** Fonctions globales ****************/
 function p_donationsTimer(t) {
 	if(f$_jquery=='jQuery') {
