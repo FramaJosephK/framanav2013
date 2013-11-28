@@ -33,13 +33,7 @@ mettre dans le fichier de config du site
 ```JavaScript
 	f$_jquery = 'fQuery';
 ```
-   c) Idem avec la feuille de style de bootstrap s'il y a de gros changements de mise en forme entre 
-le contenu de la page avant et après la prise en compte de la feuille de style.
-```HTML
-	<link media="screen" rel="stylesheet" href="/nav/lib/bootstrap/css/bootstrap.min.css" />
-```
 
-	
 Note : pour désactiver les éléments de la nav (message d'alerte, fenêtres modales, nav, macaron),
 mais profiter tout de même des CSS de bootstrap et de jQuery on peut ajouter ce paramètre au fichier de config :
 ```JavaScript
