@@ -76,8 +76,25 @@ function f$_start_jquery() {
 		var f$ = (f$_jquery_noconflict) ? fQuery.noConflict() : fQuery;
 	}
 	
+	// On charge bootstrap css d'abord sans attendre le DOM (à l'ancienne, sans jquery)
+	if (f$_bootstrap_css) {
+		var f$_bootstrap_link = document.createElement('link');
+		f$_bootstrap_link.rel = "stylesheet";
+		f$_bootstrap_link.media="screen";
+		f$_bootstrap_link.href= f$_nav+"lib/bootstrap/css/bootstrap.min.css";    
+
+		switch (f$_css_position) {
+			case 'start' : document.getElementsByTagName('head')[0].insertBefore(f$_bootstrap_link, document.getElementsByTagName('head')[0].firstChild);break;
+			case 'next' : document.getElementById('nav_js').parentNode.insertBefore(f$_bootstrap_link, document.getElementById('nav_js').nextSibling);break;
+			case 'end' : document.getElementsByTagName('head')[0].appendChild(f$_bootstrap_link);break;
+		}
+		console.log('Ok bootstrap.min.css');
+	} else {
+		console.info('bootstrap.min.css désactivé');
+	}
+	
 	f$(document).ready(function() {
-		// On charge d'abord le code HTML
+		// On charge ensuite le code HTML
 		f$.ajax({
 			url: f$_nav+'nav.html',
 			cache: f$_cache
@@ -98,18 +115,6 @@ function f$_start_jquery() {
 				console.info('Responsive désactivé');
 			}
 			
-			// On charge bootstrap
-			if (f$_bootstrap_css) {
-				switch (f$_css_position) {
-					case 'start' : f$('head').prepend('<link href="'+f$_nav+'lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">');break;
-					case 'next' : f$('script[src$="nav/nav.js"]').after('<link href="'+f$_nav+'lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">');break;
-					case 'end' : f$('head').append('<link href="'+f$_nav+'lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">');break;
-				}				
-				console.log('Ok bootstrap.min.css');
-			} else {
-				console.info('bootstrap.min.css désactivé');
-			}
-
 			// On affiche le code html
 			f$('body').prepend(html); console.log('Ok nav.html');
 			// Correctif sur les url relatives (les images) dans le code html
@@ -144,7 +149,7 @@ function f$_start_jquery() {
 			
 			function go_BootStrap() {
 			if (f$_not_in_frame) { // Pas de bandeau, nav, modale et macaron en mode iframe
-					f$('#framanav').fadeIn('slow');
+				f$('#framanav').fadeIn('slow');
 				
 				// if(f$_nav_static) f$('#framanav').css('position','fixed'); 
 				
@@ -300,45 +305,6 @@ function f$_start_jquery() {
 	});
 }
 
-/*
-f$_load = function(f$_jquery) {
-	if (f$_jquery == 'jQuery') {
-		addScript(f$_nav+'lib/jquery/jquery.min.js');
-		f$_load.is_ready(0, f$_jquery);
-	} else {
-	}
-}
-
-f$_load.is_ready = function(time_elapsed, f$_jquery) {
-	if (typeof(jQuery) == "undefined") {
-		if (time_elapsed <= 5500) {
-			console.warn('on attend '+f$_jquery+' '+time_elapsed+'ms');
-			setTimeout("f$_load.is_ready(" + (time_elapsed + 100) + ", f$_jquery)", 100);
-		} else {
-			console.error(f$_jquery+' ne se charge pas');
-		}
-	} else {
-		console.log('Ok '+f$_jquery+'.min.js');
-		go_jQuery();	
-	}
-}
-
-addScript(f$_nav+'config/config.js');
-if (f$_config == 'global') {
-	console.log('Ok config.js');
-	addScript(f$_nav+'config/'+f$_site+'.js');
-	if (f$_config == 'local') {
-		console.log('Ok '+f$_site+'.js');
-		if (window.jQuery === undefined || window.jQuery.fn.jquery !== '1.10.2') {
-			console.log('jQuery chargé par AJAX - Mode isolé'+f$_config);
-			f$_load(f$_jquery);
-		} else {
-			console.log('jQuery chargé par HTML');
-			go_jQuery();
-		}	
-	}
-}
-	
 */
 /************** Fonctions globales ****************/
 function p_donationsTimer(t) {
@@ -426,17 +392,3 @@ function f$_loadScript(url, callback, forceCallback) {
 		}
 	}
 }
-
-/*
-function f$_loadScript(url, callback) {   
-    var head = document.getElementsByTagName('head')[0];
-    var script = document.createElement('script');
-    script.type = 'text/javascript';
-    script.src = url;
-
-    script.onreadystatechange = callback;
-    script.onload = callback;
-
-    head.appendChild(script);
-}
-*/
