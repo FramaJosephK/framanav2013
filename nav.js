@@ -145,6 +145,19 @@ function f$_start_jquery() {
 				console.info('bootstrap.min.js désactivé');
 			}
 			
+			// Video JS
+			if (f$_video_js) {
+				f$('#nav_js').after('<link rel="stylesheet" type="text/css" href="'+f$_nav+'lib/video-js/video-js.css" />');
+				console.log('Ok video-js.css');
+				f$('video').attr({
+					'class':'video-js vjs-default-skin',
+					'data-setup':'{}'});
+				f$.getScript(f$_nav+'lib/video-js/video.js', function() {
+					console.log('Ok video.js');
+					videojs.options.flash.swf = f$_nav+'lib/video-js/video-js.swf';
+				});
+			}
+			
 			/** On peut ajouter des scripts jQuery "génériques" ici mais... **/
 			
 			function go_BootStrap() {

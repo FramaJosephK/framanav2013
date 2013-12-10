@@ -42,3 +42,6 @@ var f$_alert_modal_onstart = true;					// s'affiche à l'ouverture de la page ?
 // Faire un don (macaron)
 var f$_donate = true;
 var f$_donate_blink_time = 30000;
+
+// Video JS
+var f$_video_js = false;
