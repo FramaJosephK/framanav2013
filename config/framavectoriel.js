@@ -26,4 +26,6 @@ if(f$_url.indexOf('svg-editor') > -1) {
   var f$_modal_don_txtdl1 = 'd\'utiliser';
   var f$_modal_don_txtdl2 = 'créer une image';
   var f$_modal_don_liendl = 'a.btn-large[href*="/svg-editor.html"]';
+  
+  var f$_video_js = true;
 }
