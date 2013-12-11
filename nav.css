@@ -168,5 +168,5 @@ a#framanav_donation:hover {filter:alpha(opacity=80);-moz-opacity:0.8;-khtml-opac
 	margin:0 !important;
 }
 .vjs-default-skin .vjs-control-bar {
-/*	background-color: rgba(20, 0, 49, 0.7);*/
+	background-color:#1b1b1b;
 }
