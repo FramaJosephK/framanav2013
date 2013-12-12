@@ -9,6 +9,10 @@ var f$_video_js = true;
 jQuery(document).ready(function() {
   jQuery('video').each(function(){
     id = jQuery(this).attr('id').replace('k-','');
-    jQuery(this).children('track').attr('src', 'http://www.framablog.org/public/playk/cache/'+id+'/fr.vtt');
+    jQuery(this).children('track').attr({
+      'src':'http://www.framablog.org/public/playk/cache/'+id+'/fr.vtt',
+      'default':''
+    });
+    
   });
 });
