@@ -12,3 +12,10 @@ jQuery(document).ready(function() {
     jQuery(this).children('track').attr('src','http://www.framablog.org/public/playk/cache/'+id+'/fr.vtt');
   });
 });
+
+
+var f$_url = window.location.href;
+if(f$_url.indexOf('no-es-una-crisis-documentaire-libre') > -1) {
+// Si on est sur no-es-una-crisis
+  var f$_nav_extra_js = true;
+}
