@@ -172,6 +172,7 @@ a#framanav_donation:hover {filter:alpha(opacity=80);-moz-opacity:0.8;-khtml-opac
 }
 
 .audio .vjs-big-play-button,
+.audio .vjs-loading-spinner,
 .audio .vjs-fullscreen-control {
 	display:none
 }
