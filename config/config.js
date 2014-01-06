@@ -43,5 +43,7 @@ var f$_alert_modal_onstart = true;					// s'affiche à l'ouverture de la page ?
 var f$_donate = true;
 var f$_donate_blink_time = 30000;
 
+// Audio JS
+var f$_audio_js = false;
 // Video JS
 var f$_video_js = false;
