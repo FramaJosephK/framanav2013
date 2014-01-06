@@ -170,3 +170,19 @@ a#framanav_donation:hover {filter:alpha(opacity=80);-moz-opacity:0.8;-khtml-opac
 .vjs-default-skin .vjs-control-bar {
 	background-color:#1b1b1b;
 }
+
+.audio .vjs-big-play-button,
+.audio .vjs-fullscreen-control {
+	display:none
+}
+
+.audio .vjs-control-bar,
+.audio .vjs-default-skin.vjs-has-started.vjs-user-inactive.vjs-playing .vjs-control-bar {
+	display: block;
+	visibility: visible!important;
+	opacity: 1!important;
+}
+
+.audio .vjs-volume-control {
+	margin-right:15px;
+}
