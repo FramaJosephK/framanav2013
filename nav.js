@@ -145,6 +145,20 @@ function f$_start_jquery() {
 				console.info('bootstrap.min.js désactivé');
 			}
 			
+			
+			// Audio JS
+			if (f$_audio_js) {
+				f$('audio').each(function() {
+					f$(this).wrap('<div class="audio" />');
+    					var outer = this.outerHTML;
+					var regex = new RegExp('<' + this.tagName, 'i');
+    					var newTag = outer.replace(regex, '<video');
+				        regex = new RegExp('</' + this.tagName, 'i');
+    					newTag = newTag.replace(regex, '</video');
+					f$(this).replaceWith(newTag);
+				});
+			}
+			
 			// Video JS
 			if (f$_video_js) {
 				f$('#nav_js').after('<link rel="stylesheet" type="text/css" href="'+f$_nav+'lib/video-js/video-js.css" />');
@@ -191,17 +205,6 @@ function f$_start_jquery() {
 				var f$_alert_dejavu = getCookie('nav-alert');
 				var f$_alert_modal_dejavu = getCookie('nav-alert-modal');
 				f$_alert_more = '';
-				
-				// Couleur aléatoire
-				if(f$_alert_type=='random') {
-					f$_color = Math.floor(Math.random()*4);
-					switch (f$_color) {
-						case 0 :f$_alert_type='warning';break;
-						case 1 :f$_alert_type='danger';break;
-						case 2 :f$_alert_type='info';break;
-						case 3 :f$_alert_type='success';break;
-					}
-				}
 				
 				// Ajout de la fenêtre modale
 				if (f$_alert_modal_text!='') {
