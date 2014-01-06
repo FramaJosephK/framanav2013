@@ -187,3 +187,7 @@ a#framanav_donation:hover {filter:alpha(opacity=80);-moz-opacity:0.8;-khtml-opac
 .audio .vjs-volume-control {
 	margin-right:15px;
 }
+
+.audio .vjs-progress-control {
+	font-size:0.9em;
+}
