@@ -11,3 +11,11 @@ var f$_alert_text = '';
 var f$_alert_modal_text = '';
 var f$_modal_don_liendl = '';
 var f$_donate = false;
+
+
+// Tests
+// Opt-in
+var f$_url = window.location.href;
+if(f$_url.indexOf('add/temoignage&fs=test') > -1) {
+  f$_email_field1 = '#edit-field-t-email-0-value';
+}
