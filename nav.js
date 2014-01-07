@@ -334,7 +334,7 @@ function f$_start_jquery() {
 							// Message d'alert pour confirmer l'inscription
 							f$(f$_email_field1).after('<div class="alert alert-success fade in" id="fs_opt-in_confirm">'+
 								'<button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>'+
-								'Votre adresse email <strong>'+f$_email+'</strong> a été ajoutée à notre liste. Vous devriez recevoir un email de confirmation.</div>');
+								'Votre adresse email <strong>'+f$_email+'</strong> a été ajoutée à notre liste.<br />Vous devriez recevoir un email de confirmation.</div>');
 						}
 					});
 				}
