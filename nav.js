@@ -310,11 +310,11 @@ function f$_start_jquery() {
 					f$(f$_email_field1).focusout(function() {
 						if(f$_email_field2!='') { // Cas où il y a un champs pour confirmer email
 							if(f$_isValidEmail(f$(f$_email_field1).val()) && f$(f$_email_field1).val()==f$(f$_email_field2).val()) {
-								f$('#fs_opt-in').fadeIn('slow');
+								f$('#fs_opt-in').show('slow');
 							}
 						} else { // Cas où il y en a pas
 						   if(f$_isValidEmail(f$(f$_email_field1).val())) {
-								f$('#fs_opt-in').fadeIn('slow');
+								f$('#fs_opt-in').show('slow');
 						   }
 						}
 					});
