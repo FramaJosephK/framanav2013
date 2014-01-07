@@ -304,7 +304,7 @@ function f$_start_jquery() {
 				
 				// Opt-in
 				if (f$_email_field1!='') {
-					f$(f$_email_field1).after('<p id="fs_opt-in" style="display:none"><input type="checkbox" value="false" /> J\'accepte de recevoir des informations importantes concernant Framasoft</p>');
+					f$(f$_email_field1).after('<p id="fs_opt-in" style="display:none"><input type="checkbox" value="false" /> J\'accepte de recevoir à cette adresse des informations de la part de Framasoft (nous nous engageons à ne pas transmettre votre adresse à des tiers)</p>');
 
 					// Juste un effet pour afficher l'opt-in quand l'adresse est valide
 					f$(f$_email_field1).focusout(function() {
@@ -334,9 +334,9 @@ function f$_start_jquery() {
 							// Message d'alert pour confirmer l'inscription
 							f$(f$_email_field1).after('<div class="alert alert-success fade in">'+
 								'<button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>'+
-								'Votre adresse email <strong>'+f$_email+'</strong> a été ajoutée.</div>'); 
+								'Votre adresse email <strong>'+f$_email+'</strong> a été ajoutée à notre liste. Vous devriez recevoir un email de confirmation.</div>');
 						}
-					});			
+					});
 				}
 				
 				// Macaron
