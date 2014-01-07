@@ -304,7 +304,7 @@ function f$_start_jquery() {
 				
 				// Opt-in
 				if (f$_email_field1!='') {
-					f$(f$_email_field1).after('<p id="fs_opt-in" style="display:none"><input type="checkbox" value="false" /> J\'accepte de recevoir à cette adresse des informations de la part de Framasoft (nous nous engageons à ne pas transmettre votre adresse à des tiers)</p>');
+					f$(f$_email_field1).after('<p id="fs_opt-in" style="display:none"><input type="checkbox" value="false" /> J\'accepte de recevoir à cette adresse des informations de la part de Framasoft<br /><small>(Framasoft s\'engage bien évidement à ne pas transmettre votre adresse à des tiers)</small></p>');
 
 					// Juste un effet pour afficher l'opt-in quand l'adresse est valide
 					f$(f$_email_field1).focusout(function() {
