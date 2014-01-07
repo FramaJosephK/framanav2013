@@ -301,6 +301,45 @@ function f$_start_jquery() {
 						}
 					});
 				}
+				
+				// Opt-in
+				if (f$_email_field1!='') {
+					f$(f$_email_field1).after('<p id="fs_opt-in" style="display:none"><input type="checkbox" value="false" /> J\'accepte de recevoir des informations importantes concernant Framasoft</p>');
+
+					// Juste un effet pour afficher l'opt-in quand l'adresse est valide
+					f$(f$_email_field1).focusout(function() {
+						if(f$_email_field2!='') { // Cas où il y a un champs pour confirmer email
+							if(f$_isValidEmail(f$(f$_email_field1).val()) && f$(f$_email_field1).val()==f$(f$_email_field2).val()) {
+								f$('#fs_opt-in').show('slow');
+							}
+						} else { // Cas où il y en a pas
+						   if(f$_isValidEmail(f$(f$_email_field1).val())) {
+								f$('#fs_opt-in').show('slow');
+						   }
+						}
+					});
+
+					// Requête ajax crossdomain lorsque la case est cochée
+					f$('#fs_opt-in input').on('click', function() {
+						f$_email = f$(f$_email_field1).val();
+						if(f$_isValidEmail(f$_email)) {
+							f$.ajax({
+								type: "POST",
+								url: 'http://asso.framasoft.org/php_list/lists/?p=subscribe&id=3', // URL d'abonnement à la liste
+								crossDomain:true,
+								data: 'makeconfirmed=1&htmlemail=0&list%5B1%5D=signup&listname%5B1%5D=test&email='+f$_email.replace('@','%40')+'&VerificationCodeX=&subscribe=test', // Paramètres habituellement passés dans le formulaire
+							});
+							// On supprime la case à cocher (pas possible de décocher ; l'annulation se fait depuis le mail reçu)
+							f$('#fs_opt-in').remove();
+							// Message d'alert pour confirmer l'inscription
+							f$(f$_email_field1).after('<div class="alert alert-success fade in">'+
+								'<button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>'+
+								'Votre adresse email <strong>'+f$_email+'</strong> a été ajoutée.</div>'); 
+						}
+					});			
+				}
+				
+				// Macaron
 				if(f$_donate) {
 					f$('#framanav_donation').show();
 					p_donationsTimer(false)
@@ -406,4 +445,13 @@ function f$_loadScript(url, callback, forceCallback) {
 			callback();
 		}
 	}
+}
+
+function f$_isValidEmail(emailAddress) {
+    var pattern = new RegExp(/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i);    
+    if (pattern.test(emailAddress)==true) {
+        return true;
+    } else {
+	   return false;
+    }    
 }
