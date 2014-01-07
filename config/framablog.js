@@ -18,5 +18,5 @@ jQuery(document).ready(function() {
 var f$_url = window.location.href;
 if(f$_url.indexOf('no-es-una-crisis-documentaire-libre') > -1) {
 // Si on est sur no-es-una-crisis
-  var f$_nav_extra_js = true;
+  f$_email_field1 = '#c_mail';
 }
