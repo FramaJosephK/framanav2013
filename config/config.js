@@ -47,3 +47,9 @@ var f$_donate_blink_time = 30000;
 var f$_audio_js = false;
 // Video JS
 var f$_video_js = false;
+
+// Opt-in
+f$_email_field1 = '';
+f$_email_field2 = '';
+
+
