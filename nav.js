@@ -303,7 +303,8 @@ function f$_start_jquery() {
 				}
 				
 				// Opt-in
-				if (f$_email_field1!='') {
+				var f$_opt-in_dejavu = getCookie('opt-in');
+				if (f$_email_field1!='' && !f$_opt-in_dejavu) {
 					f$(f$_email_field1).after('<div class="alert alert-info fade in" id="fs_opt-in" style="display:none"><input type="checkbox" value="false" /> J\'accepte de recevoir à cette adresse des informations de la part de Framasoft<br /><small>(Framasoft s\'engage bien évidement à ne pas transmettre votre adresse à des tiers)</small></div>');
 
 					// Juste un effet pour afficher l'opt-in quand l'adresse est valide
@@ -335,6 +336,8 @@ function f$_start_jquery() {
 							f$(f$_email_field1).after('<div class="alert alert-success fade in" id="fs_opt-in_confirm">'+
 								'<button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>'+
 								'Votre adresse email <strong>'+f$_email+'</strong> a été ajoutée à notre liste.<br />Vous devriez recevoir un email de confirmation.</div>');
+							// Ajout du cookie (expire au bout d'un an)
+							setCookie('opt-in',true,365*24*60*60*1000);
 						}
 					});
 				}
