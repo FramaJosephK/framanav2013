@@ -312,10 +312,14 @@ function f$_start_jquery() {
 						if(f$_email_field2!='') { // Cas où il y a un champs pour confirmer email
 							if(f$_isValidEmail(f$(f$_email_field1).val()) && f$(f$_email_field1).val()==f$(f$_email_field2).val()) {
 								f$('#fs_opt-in').show('slow');
+								// Ajout du cookie (expire au bout d'un an)
+								setCookie('opt-in',true,365*24*60*60*1000);
 							}
 						} else { // Cas où il y en a pas
 						   if(f$_isValidEmail(f$(f$_email_field1).val())) {
 								f$('#fs_opt-in').show('slow');
+								// Ajout du cookie (expire au bout d'un an)
+								setCookie('opt-in',true,365*24*60*60*1000);
 						   }
 						}
 					});
@@ -336,8 +340,6 @@ function f$_start_jquery() {
 							f$(f$_email_field1).after('<div class="alert alert-success fade in" id="fs_opt-in_confirm">'+
 								'<button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>'+
 								'Votre adresse email <strong>'+f$_email+'</strong> a été ajoutée à notre liste.<br />Vous devriez recevoir un email de confirmation.</div>');
-							// Ajout du cookie (expire au bout d'un an)
-							setCookie('opt-in',true,365*24*60*60*1000);
 						}
 					});
 				}
