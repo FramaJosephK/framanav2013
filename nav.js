@@ -303,8 +303,8 @@ function f$_start_jquery() {
 				}
 				
 				// Opt-in
-				var f$_opt-in_dejavu = getCookie('opt-in');
-				if (f$_email_field1!='' && !f$_opt-in_dejavu) {
+				var f$_optin_dejavu = getCookie('opt-in');
+				if (f$_email_field1!='' && !f$_optin_dejavu) {
 					f$(f$_email_field1).after('<div class="alert alert-info fade in" id="fs_opt-in" style="display:none"><input type="checkbox" value="false" /> J\'accepte de recevoir à cette adresse des informations de la part de Framasoft<br /><small>(Framasoft s\'engage bien évidement à ne pas transmettre votre adresse à des tiers)</small></div>');
 
 					// Juste un effet pour afficher l'opt-in quand l'adresse est valide
