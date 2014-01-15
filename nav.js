@@ -309,7 +309,7 @@ function f$_start_jquery() {
 						'<div class="alert alert-info fade in" id="fs_opt-in" style="display:none">'+
 						'<input type="checkbox" id="fs_opt-in_checkbox" value="false" />'+
 						'<label for="fs_opt-in_checkbox">J\'accepte de recevoir à cette adresse des informations importantes de la part de Framasoft '+
-						'<small>(Promis, nous ne revendons pas nos fichiers, même à la NSA ! '+
+						'<br /><small>(Promis, nous ne revendons pas nos fichiers, même à la NSA ! '+
 						'[<a href="http://soutenir.framasoft.org/newsletter">pourquoi m\'inscrire ?</a>])</small></label></div>'
 					);
 
@@ -323,6 +323,7 @@ function f$_start_jquery() {
 
 					// Requête ajax crossdomain lorsque la case est cochée
 					f$('#fs_opt-in').on('click', function() {
+						f$('#fs_opt-in_error').remove();
 						f$_email = f$(f$_email_field1).val();
 						if(f$_email_field2!='' && f$(f$_email_field1).val()!=f$(f$_email_field2).val()) { // Cas où il y a un champs pour confirmer email
 							f$(f$_email_field1).after(
@@ -333,7 +334,7 @@ function f$_start_jquery() {
 						} else if( !f$_isValidEmail(f$(f$_email_field1).val())) {
 							f$(f$_email_field1).after(
 								'<div class="alert alert-danger fade in" id="fs_opt-in_error">'+
-								'L\'adresse email '+f$_email+' n\'est pas une adresse valide.</div>'
+								'L\'adresse email '+f$_email+' n\'est pas une valide.</div>'
 							);
 							return false;	
 						} else {
