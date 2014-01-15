@@ -306,7 +306,7 @@ function f$_start_jquery() {
 				var f$_optin_dejavu = getCookie('opt-in');
 				if (f$_email_field1!='' && !f$_optin_dejavu) {
 					f$(f$_email_field1).after(
-						'<div class="alert alert-info fade in" id="fs_opt-in" style="display:none">'+
+						'<div class="alert alert-info fade in" id="fs_opt-in">'+
 						'<input type="checkbox" id="fs_opt-in_checkbox" value="false" />'+
 						'<label for="fs_opt-in_checkbox">J\'accepte de recevoir à cette adresse des informations importantes de la part de Framasoft</label>'+
 						'<br /><small>(Promis, nous ne revendons pas nos fichiers, même à la NSA ! '+
@@ -316,7 +316,6 @@ function f$_start_jquery() {
 					// Juste un effet pour afficher l'opt-in quand l'adresse est valide
 					f$(f$_email_field1).focusin(function() {
 						f$('#fs_opt-in_error').remove();
-						f$('#fs_opt-in').show('slow');
 						// Ajout du cookie (expire au bout d'un an)
 						setCookie('opt-in',true,365*24*60*60*1000);
 					});
