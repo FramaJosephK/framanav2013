@@ -308,9 +308,9 @@ function f$_start_jquery() {
 					f$(f$_email_field1).after(
 						'<div class="alert alert-info fade in" id="fs_opt-in" style="display:none">'+
 						'<input type="checkbox" id="fs_opt-in_checkbox" value="false" />'+
-						'<label for="fs_opt-in_checkbox">J\'accepte de recevoir à cette adresse des informations importantes de la part de Framasoft '+
+						'<label for="fs_opt-in_checkbox">J\'accepte de recevoir à cette adresse des informations importantes de la part de Framasoft</label>'+
 						'<br /><small>(Promis, nous ne revendons pas nos fichiers, même à la NSA ! '+
-						'[<a href="http://soutenir.framasoft.org/newsletter">pourquoi m\'inscrire ?</a>])</small></label></div>'
+						'[<a href="http://soutenir.framasoft.org/newsletter">pourquoi m\'inscrire ?</a>])</small></div>'
 					);
 
 					// Juste un effet pour afficher l'opt-in quand l'adresse est valide
@@ -322,7 +322,7 @@ function f$_start_jquery() {
 					});
 
 					// Requête ajax crossdomain lorsque la case est cochée
-					f$('#fs_opt-in').on('click', function() {
+					f$('#fs_opt-in input, #fs_opt-in label').on('click', function() {
 						f$('#fs_opt-in_error').remove();
 						f$_email = f$(f$_email_field1).val();
 						if(f$_email_field2!='' && f$(f$_email_field1).val()!=f$(f$_email_field2).val()) { // Cas où il y a un champs pour confirmer email
@@ -334,16 +334,16 @@ function f$_start_jquery() {
 						} else if( !f$_isValidEmail(f$(f$_email_field1).val())) {
 							f$(f$_email_field1).after(
 								'<div class="alert alert-danger fade in" id="fs_opt-in_error">'+
-								'L\'adresse email '+f$_email+' n\'est pas une valide.</div>'
+								'L\'adresse email '+f$_email+' n\'est pas valide.</div>'
 							);
 							return false;	
 						} else {
 							f$('#fs_opt-in input').attr('checked', true);
 							f$.ajax({
 								type: "POST",
-								url: 'http://asso.framasoft.org/php_list/lists/?p=subscribe&id=3', // URL d'abonnement à la liste
+								url: 'http://asso.framasoft.org/php_list/lists/?p=subscribe&id=2', // URL d'abonnement à la liste
 								crossDomain:true,
-								data: 'makeconfirmed=1&htmlemail=0&list%5B1%5D=signup&listname%5B1%5D=test&email='+f$_email.replace('@','%40')+'&VerificationCodeX=&subscribe=test', // Paramètres habituellement passés dans le formulaire
+								data: 'makeconfirmed=1&htmlemail=0&list%5B5%5D=signup&listname%5B5%5D=Newsletter&email='+f$_email.replace('@','%40')+'&VerificationCodeX=&subscribe=Abonnement', // Paramètres habituellement passés dans le formulaire
 							});
 							// On supprime la case à cocher (pas possible de décocher ; l'annulation se fait depuis le mail reçu)
 							f$('#fs_opt-in').remove();
