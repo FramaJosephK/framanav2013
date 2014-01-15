@@ -193,7 +193,7 @@ a#framanav_donation:hover {filter:alpha(opacity=80);-moz-opacity:0.8;-khtml-opac
 }
 
 /* Opt-in */
-#fs_opt-in, #fs_opt-in_confirm {
+#fs_opt-in, #fs_opt-in_confirm, #fs_opt-in_error {
 	margin-top:10px;
 	margin-bottom:10px;
 	font-size:13px;
@@ -206,4 +206,13 @@ a#framanav_donation:hover {filter:alpha(opacity=80);-moz-opacity:0.8;-khtml-opac
 #fs_opt-in input {
 	margin:0;
 	width:auto !important;
+}
+
+#fs_opt-in label {
+	display: inline;
+    	float: none;
+    	width: auto;
+    	text-align: left;
+    	font-weight: normal;
+    	margin: 0px 0px 0px 5px;
 }
