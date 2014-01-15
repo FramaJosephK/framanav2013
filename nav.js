@@ -305,29 +305,39 @@ function f$_start_jquery() {
 				// Opt-in
 				var f$_optin_dejavu = getCookie('opt-in');
 				if (f$_email_field1!='' && !f$_optin_dejavu) {
-					f$(f$_email_field1).after('<div class="alert alert-info fade in" id="fs_opt-in" style="display:none"><input type="checkbox" value="false" /> J\'accepte de recevoir à cette adresse des informations de la part de Framasoft<br /><small>(Framasoft s\'engage bien évidement à ne pas transmettre votre adresse à des tiers)</small></div>');
+					f$(f$_email_field1).after(
+						'<div class="alert alert-info fade in" id="fs_opt-in" style="display:none">'+
+						'<input type="checkbox" id="fs_opt-in_checkbox" value="false" />'+
+						'<label for="fs_opt-in_checkbox">J\'accepte de recevoir à cette adresse des informations importantes de la part de Framasoft '+
+						'<small>(Promis, nous ne revendons pas nos fichiers, même à la NSA ! '+
+						'[<a href="http://soutenir.framasoft.org/newsletter">pourquoi m\'inscrire ?</a>])</small></label></div>'
+					);
 
 					// Juste un effet pour afficher l'opt-in quand l'adresse est valide
-					f$(f$_email_field1).focusout(function() {
-						if(f$_email_field2!='') { // Cas où il y a un champs pour confirmer email
-							if(f$_isValidEmail(f$(f$_email_field1).val()) && f$(f$_email_field1).val()==f$(f$_email_field2).val()) {
-								f$('#fs_opt-in').show('slow');
-								// Ajout du cookie (expire au bout d'un an)
-								setCookie('opt-in',true,365*24*60*60*1000);
-							}
-						} else { // Cas où il y en a pas
-						   if(f$_isValidEmail(f$(f$_email_field1).val())) {
-								f$('#fs_opt-in').show('slow');
-								// Ajout du cookie (expire au bout d'un an)
-								setCookie('opt-in',true,365*24*60*60*1000);
-						   }
-						}
+					f$(f$_email_field1).focusin(function() {
+						f$('#fs_opt-in_error').remove();
+						f$('#fs_opt-in').show('slow');
+						// Ajout du cookie (expire au bout d'un an)
+						setCookie('opt-in',true,365*24*60*60*1000);
 					});
 
 					// Requête ajax crossdomain lorsque la case est cochée
-					f$('#fs_opt-in input').on('click', function() {
+					f$('#fs_opt-in').on('click', function() {
 						f$_email = f$(f$_email_field1).val();
-						if(f$_isValidEmail(f$_email)) {
+						if(f$_email_field2!='' && f$(f$_email_field1).val()!=f$(f$_email_field2).val()) { // Cas où il y a un champs pour confirmer email
+							f$(f$_email_field1).after(
+								'<div class="alert alert-danger fade in" id="fs_opt-in_error">'+
+								'Les adresses emails ne correspondent pas.</div>'
+							);
+							return false;
+						} else if( !f$_isValidEmail(f$(f$_email_field1).val())) {
+							f$(f$_email_field1).after(
+								'<div class="alert alert-danger fade in" id="fs_opt-in_error">'+
+								'L\'adresse email '+f$_email+' n\'est pas une adresse valide.</div>'
+							);
+							return false;	
+						} else {
+							f$('#fs_opt-in input').attr('checked', true);
 							f$.ajax({
 								type: "POST",
 								url: 'http://asso.framasoft.org/php_list/lists/?p=subscribe&id=3', // URL d'abonnement à la liste
@@ -337,9 +347,11 @@ function f$_start_jquery() {
 							// On supprime la case à cocher (pas possible de décocher ; l'annulation se fait depuis le mail reçu)
 							f$('#fs_opt-in').remove();
 							// Message d'alert pour confirmer l'inscription
-							f$(f$_email_field1).after('<div class="alert alert-success fade in" id="fs_opt-in_confirm">'+
+							f$(f$_email_field1).after(
+								'<div class="alert alert-success fade in" id="fs_opt-in_confirm">'+
 								'<button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>'+
-								'Votre adresse email <strong>'+f$_email+'</strong> a été ajoutée à notre liste.<br />Vous devriez recevoir un email de confirmation.</div>');
+								'Votre adresse email <strong>'+f$_email+'</strong> a été ajoutée à notre liste. Vous devriez avoir reçu un email de confirmation.</div>'
+							);
 						}
 					});
 				}
