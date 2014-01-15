@@ -2,6 +2,6 @@
     vertical-align: top;
 }
 
-#fs_opt-in, #fs_opt-in_confirm {
+#fs_opt-in, #fs_opt-in_confirm, #fs_opt-in_error {
     margin-left:-150px;
 }
