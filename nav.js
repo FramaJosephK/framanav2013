@@ -310,7 +310,7 @@ function f$_start_jquery() {
 						'<input type="checkbox" id="fs_opt-in_checkbox" value="false" />'+
 						'<label for="fs_opt-in_checkbox">J\'accepte de recevoir à cette adresse des informations importantes de la part de Framasoft</label>'+
 						'<br /><small>(Promis, nous ne revendons pas nos fichiers, même à la NSA ! '+
-						'[<a href="http://soutenir.framasoft.org/newsletter">pourquoi m\'inscrire ?</a>])</small></div>'
+						'[<a href="http://soutenir.framasoft.org/newsletter" target="_blank" title="Accès au formulaire d\'inscription à la lettre d\'information (nouvelle fenêtre)">pourquoi m\'inscrire ?</a>])</small></div>'
 					);
 
 					// Juste un effet pour afficher l'opt-in quand l'adresse est valide
