@@ -215,4 +215,6 @@ a#framanav_donation:hover {filter:alpha(opacity=80);-moz-opacity:0.8;-khtml-opac
     	text-align: left !important;
     	font-weight: normal !important;
     	margin: 0px 0px 0px 5px !important;
+    	white-space: normal;
+	color: rgb(58, 135, 173);
 }
