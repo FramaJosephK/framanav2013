@@ -172,6 +172,34 @@ function f$_start_jquery() {
 				});
 			}
 			
+			// Bloqueur d'iframe style Flashblock
+			var f$_i=0;
+			f$('a[iframe]').click(function() {
+				// Si attribut iframe sur <a> on l'ajoute le code au clic + ajout d'un Id à l'iframe
+				f$(this).after(f$(this).attr('iframe').replace('iframe','iframe id="frame'+f$_i+'"'));
+				// On supprime <a><img/></a>
+				f$(this).remove();
+				
+				var iframe = document.getElementById('frame'+f$_i);
+				// Autoplay Soundcloud
+				if(iframe.src.indexOf('soundcloud') > -1) {
+					iframe.src = iframe.src.replace('auto_play=false','auto_play=true');
+				// Autoplay Youtube, Vime, Dailymotion
+				} else if(iframe.src.indexOf('youtube') > -1 || iframe.src.indexOf('dailymotion') > -1 || iframe.src.indexOf('vimeo') > -1) {
+					if(iframe.src.indexOf('?') > -1) {
+						iframe.src = iframe.src+'&autoplay=1';
+					} else {
+						iframe.src = iframe.src+'?autoplay=1';
+					}
+				// Reload de la frame (au cas où ça passerait mal)
+				} else {
+					iframe.src = iframe.src
+				}
+				f$_i++;
+				return false;
+			});
+			
+			
 			/** On peut ajouter des scripts jQuery "génériques" ici mais... **/
 			
 			function go_BootStrap() {
