@@ -301,7 +301,7 @@ function f$_start_jquery() {
 									'<h3>Soutenez Framasoft</h3>'+
 								'</div>'+
 								'<div class="modal-body">'+
-									'<img src="http://soutenir.framasoft.org/files/lldemars-framasoft.png" style="float:right;width:150px;margin-left:15px" alt="" />'+
+									'<img src="'+f$_nav+'img/lldemars-framasoft.png" style="float:right;width:150px;margin-left:15px" alt="" />'+
 									'<p>Vous êtes sur le point '+f$_modal_don_txtdl1+' une ressource <b>libre</b> issue de la vingtaine de projets du réseau Framasoft.</p>'+
 									'<p>Cette ressource est <b>gratuite</b> (et le sera tant que nous existerons) parce que <b>Framasoft est une association d\'intérêt général à but non lucratif</b> dont l\'objectif est justement la diffusion du logiciel libre et sa culture au plus large public.'+
 									'<p>Mais tout ceci est rendu possible parce que Framasoft est <b>soutenue par les dons (défiscalisables) de ses utilisateurs</b>.</p>'+
