@@ -1,5 +1,7 @@
 var f$_config = 'local';
 
+var f$_jquery = 'fQuery';
+
 var f$_alert_text = '';
 
 // Extra CSS sans attendre chargement du DOM (à intégrer dans nav.js faire de même avec nav.css)
