@@ -1,6 +1,6 @@
 var f$_site = window.location.host
 f$_site = f$_site.replace(/^(www|test)\./i,"");
-f$_site = f$_site.replace(/\.(com|net|org)$/i,"");
+f$_site = f$_site.replace(/\.(com|net|org|fr|pro)$/i,"");
 
 var f$_nav_js = document.getElementById('nav_js').src;
 var f$_nav = f$_nav_js.replace('nav.js',''); // = 'http://'+f$_site+'/nav/';
