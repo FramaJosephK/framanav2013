@@ -15,7 +15,8 @@ if(f$_url.indexOf('/bot') > -1) {
 }
 if(f$_url.indexOf('/accueil') > -1) {
 	// Force la désactivation des fenêtres modales, du bandeau et du macaron
-	var f$_alert_text = 'In celebration of the win against SOPA and PIPA two years ago, and in memory of one of its leaders, Aaron Swartz, we are planning a day of protest against mass surveillance, to take place this <strong style="color:#f2c45a">February 11th</strong>.';
+	var f$_alert_type = 'black';
+	var f$_alert_text = '<p style="text-align:center; font-weight:bold">In celebration of the win against SOPA and PIPA two years ago, and in memory of one of its leaders, Aaron Swartz, we are planning a day of protest against mass surveillance, to take place this <strong style="color:#f2c45a; font-size:110%">February 11th</strong>.</p>';
   	var f$_alert_modal_text = '';
   	var f$_modal_don_liendl = '';
  // 	var f$_donate = false;
