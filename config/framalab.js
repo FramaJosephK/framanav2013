@@ -19,7 +19,7 @@ if(f$_url.indexOf('/accueil') > -1) {
 	var f$_alert_text = '<div style="margin:0 auto; max-width:800px; text-align:justify"><p style="font-weight:bold">'+
 		'Le réseau Framasoft s\'associe à la protestation générale des internautes contre la surveillance massive de nos données. '+
 		'Le 11 février est "la journée de la contre attaque" commémorant les victoires que les internautes ont obtenu contre les lois ACTA, SOPA et PIPA et en souvenir d\'Aaron Schwartz.<br/>'+
-		'<a href="http://www.framablog.org/index.php/post/2014/02/10/the-day-we-fight-back" style="color:#f2c45a;>Participez à la protestation</a>.</p></div>';
+		'<a href="http://www.framablog.org/index.php/post/2014/02/10/the-day-we-fight-back" style="color:#f2c45a;">Participez à la protestation</a>.</p></div>';
   	var f$_alert_modal_text = '';
   	var f$_modal_don_liendl = '';
  // 	var f$_donate = false;
