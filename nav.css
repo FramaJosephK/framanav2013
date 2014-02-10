@@ -93,7 +93,7 @@ a#framanav_donation {
 	height: 63px;
 	width: 63px;
 	background: url('./img/don.png') no-repeat;
-	z-index : 99;
+	z-index : 1101;
 }
 a#framanav_donation:hover {filter:alpha(opacity=80);-moz-opacity:0.8;-khtml-opacity: 0.8;opacity: 0.8;}
 
