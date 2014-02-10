@@ -18,6 +18,10 @@
 	height:42px;
 }
 
+#framanav.navbar {
+    z-index:1001;
+}
+
 #framanav img {margin:0}
 
 #framanav .navbar-brand,
