@@ -130,6 +130,12 @@ a#framanav_donation:hover {filter:alpha(opacity=80);-moz-opacity:0.8;-khtml-opac
     border-color: black;
 }
 
+#nav-alert.alert-black {
+    color: white;
+    background-color: black;
+    border-color: #262626;
+}
+
 #nav-alert.alert {
 	padding:10px;
 	margin-bottom:0;
