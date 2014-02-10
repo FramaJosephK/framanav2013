@@ -17,7 +17,7 @@ if(f$_url.indexOf('/accueil') > -1) {
 	// Force la désactivation des fenêtres modales, du bandeau et du macaron
 	var f$_alert_type = 'black';
 	var f$_alert_text = 
-		'<div style="margin:0 auto; max-width:800px;font-weight:bold">'+
+		'<div style="margin:0 auto; max-width:800px;font-weight:bold;font-size:13px">'+
 			'<p>Framasoft s\'associe à la protestation générale des internautes contre '+
 			'la surveillance massive de nos données révélée par Edward Snowden.<br /> Le '+
 			'11 février est "la journée de la contre attaque" commémorant les '+
