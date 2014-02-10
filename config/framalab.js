@@ -16,7 +16,10 @@ if(f$_url.indexOf('/bot') > -1) {
 if(f$_url.indexOf('/accueil') > -1) {
 	// Force la désactivation des fenêtres modales, du bandeau et du macaron
 	var f$_alert_type = 'black';
-	var f$_alert_text = '<div style="margin:0 auto; max-width:800px; text-align:justify"><p style="font-weight:bold">In celebration of the win against SOPA and PIPA two years ago, and in memory of one of its leaders, Aaron Swartz, we are planning a day of protest against mass surveillance, to take place this <span style="color:#f2c45a; font-size:110%">February 11th</span>.</p></div>';
+	var f$_alert_text = '<div style="margin:0 auto; max-width:800px; text-align:justify"><p style="font-weight:bold">'+
+		'Le réseau Framasoft s\'associe à la protestation générale des internautes contre la surveillance massive de nos données. '+
+		'Le 11 février est "la journée de la contre attaque" commémorant les victoires que les internautes ont obtenu contre les lois ACTA, SOPA et PIPA et en souvenir d\'Aaron Schwartz.<br/>'+
+		'<a href="http://www.framablog.org/index.php/post/2014/02/10/the-day-we-fight-back" style="color:#f2c45a;>Participez à la protestation</a>.</p></div>';
   	var f$_alert_modal_text = '';
   	var f$_modal_don_liendl = '';
  // 	var f$_donate = false;
