@@ -31,7 +31,7 @@ var f$_alert_text =						// /!\ aux \' dans le texte
 '<div style="margin:0 auto; max-width:800px;font-weight:bold;">'+
 '<p style="font-size:13px">Framasoft s’associe au mouvement général contre '+
 'la surveillance massive de nos données révélée par Edward Snowden.<br /> Le '+
-'11 février est « la journée de la contre attaque » commémorant les '+
+'11 février est « la journée de la contre-attaque » commémorant les '+
 'victoires obtenues contre les lois ACTA, SOPA et PIPA et en souvenir '+
 'd’Aaron Schwartz.</p>'+
 '<p style="text-align:center">'+
