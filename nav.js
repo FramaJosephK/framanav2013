@@ -65,7 +65,7 @@ var f$_start_local_config = function() {
 }
 
 
-f$_loadScript(f$_nav+'config/config.js', f$_start_global_config);
+f$_loadScript(f$_nav+'config/config.js?140211', f$_start_global_config);
 
 
 function f$_start_jquery() {
@@ -104,7 +104,7 @@ function f$_start_jquery() {
 		})			
 		.done(function(html) {				
 			// Import de nav.css
-			f$('script[src$="nav/nav.js"]').after('<link rel="stylesheet" type="text/css" href="'+f$_nav+'nav.css" />');
+			f$('script[src$="nav/nav.js"]').after('<link rel="stylesheet" type="text/css" href="'+f$_nav+'nav.css?140211" />');
 			console.log('Ok nav.css');
 			
 			// On ajoute le viewport si Responsive
