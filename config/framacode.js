@@ -1,13 +1,19 @@
 var f$_config = 'local';
 
-// Popup de don
-var f$_modal_don_liendl = 'a[href*="files.framakey.org"]';
-
 var f$_jquery = 'fQuery';
 
 var f$_css_position = 'start';
 
-/* Alertes
-var f$_alert_type = 'danger';
-var f$_alert_text = '<strong>Groumph !</strong> On teste la nouvelle nav ici.';
-*/
+/** Piwik **/
+var _paq = _paq || [];
+_paq.push(["trackPageView"]);
+_paq.push(["enableLinkTracking"]);
+
+(function() {
+  var u=(("https:" == document.location.protocol) ? "https" : "http") + "://stats.framasoft.org/";
+  _paq.push(["setTrackerUrl", u+"piwik.php"]);
+  _paq.push(["setSiteId", "17"]);
+  var d=document, g=d.createElement("script"), s=d.getElementsByTagName("script")[0]; g.type="text/javascript";
+  g.defer=true; g.async=true; g.src=u+"piwik.js"; s.parentNode.insertBefore(g,s);
+})();
+/** Fin Piwik **/
