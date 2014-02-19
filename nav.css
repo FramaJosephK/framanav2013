@@ -34,6 +34,7 @@
 #framanav .nav-container {
 	width:950px;								/*1130px; avec moteur de recherche */
 	margin:auto;
+	background-color:#f8f8f8;
 }
 
 #framanav .popover { 
