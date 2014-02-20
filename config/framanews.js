@@ -21,7 +21,7 @@ _paq.push(["enableLinkTracking"]);
 
 (function() {
 //  var u=(("https:" == document.location.protocol) ? "https" : "http") + "://stats.framasoft.org/";
-  var u="http://stats.framasoft.org/";
+  var u="http://stats.framanews.org/";
   _paq.push(["setTrackerUrl", u+"piwik.php"]);
   _paq.push(["setSiteId", "20"]);
   var d=document, g=d.createElement("script"), s=d.getElementsByTagName("script")[0]; g.type="text/javascript";
