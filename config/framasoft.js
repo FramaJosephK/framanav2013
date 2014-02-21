@@ -3,6 +3,18 @@ var f$_config = 'local';
 // Opt-in
 var f$_email_field1 = '#email_auteur';
 
+var f$_url = window.location.href;
+if(f$_url == 'http://www.framasoft.net' || f$_url.indexOf('framasoft.net/accueil') > -1) {
+// Force la désactivation des fenêtres modales, du bandeau et du macaron
+var f$_alert_type = 'info';
+var f$_alert_text =
+  '<div style="text-align:center"><a href="http://april.org/campagne">'+
+  '<img width="580" height="76"'+
+  'src="http://april.org/campagne/images/priorite-logiciel-libre-je-soutiens-april.png"'+
+  'alt="Priorité au Logiciel Libre! Je soutiens l’April." />'+
+  '</a></div>';
+}
+
 
 /** Piwik **/
 var _paq = _paq || [];
