@@ -5,7 +5,7 @@ var f$_email_field1 = '#email_auteur';
 
 // Bandeau APRIL
 var f$_url = window.location.href;
-if(f$_url == 'http://www.framasoft.net' || f$_url.indexOf('framasoft.net/accueil') > -1) {
+if(f$_url == 'http://www.framasoft.net/' || f$_url.indexOf('framasoft.net/accueil') > -1) {
 var f$_alert_type = 'info';
 var f$_alert_text =
   '<div style="text-align:center"><a href="http://april.org/campagne">'+
