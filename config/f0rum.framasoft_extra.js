@@ -1,1 +1,1 @@
-f$('body').removeClass('docker');
+f$('body').removeClass('docked');
