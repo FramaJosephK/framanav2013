@@ -22,7 +22,18 @@ Prendre modèle sur config/config.js pour connaître les paramètres à personna
 	<script src="/nav/nav.js" id="nav_js" type="text/javascript"></script>
 ```
 **ne pas oublier id="nav_js"**
- 
+
+Dans certain cas, le CMS utilisé compresse à la volée le javascript, il faut alors utiliser ce code là: 
+```HTML
+<script type="text/javascript">
+var script = document.createElement('script');
+    script.type = "text/javascript";
+    script.id="nav_js";
+    script.src="/nav/nav.js";    
+    document.getElementsByTagName('head')[0].appendChild(script);
+</script>
+```
+
    b) Ajouter jquery.min.js et bootstrap.min.js avant si nécessaire pour le bon fonctionnement du site
 ```HTML
 	<script src="/nav/lib/jquery/jquery.min.js" type="text/javascript"></script>
