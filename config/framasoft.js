@@ -6,13 +6,25 @@ var f$_email_field1 = '#email_auteur';
 // Bandeau APRIL
 var f$_url = window.location.href;
 if(f$_url == 'http://www.framasoft.net/' || f$_url.indexOf('framasoft.net/accueil') > -1) {
-var f$_alert_type = 'info';
-var f$_alert_text =
+  var f$_alert_type = 'info';
+  var f$_rand = Math.random();
+	if (f$_rand < .5){
+  // April
+    var f$_alert_text =
   '<div style="text-align:center"><a href="http://april.org/campagne">'+
   '<img width="580" height="76"'+
   'src="http://april.org/campagne/images/priorite-logiciel-libre-je-soutiens-april.png"'+
   'alt="Priorité au Logiciel Libre! Je soutiens l’April." />'+
   '</a></div>';
+	} else {
+  // Racketiciel
+    var f$_alert_text =
+  '<div style="text-align:center"><a href="http://racketware.info/petition/click/fr">'+
+  '<img width="580" height="76"'+
+  'src="https://lut.im/7hdUqDi1/l4HdUJqf"'+
+  'alt="Informatique : choisissez avant de payer, signez la pétition !" title="Informatique : choisissez avant de payer, signez la pétition !" />'+
+  '</a></div>';
+	}
 }
 
 
