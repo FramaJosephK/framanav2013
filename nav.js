@@ -213,7 +213,7 @@ function f$_start_jquery() {
 				f$('#framanav .dropdown-menu a, #framanav .navbar-brand, #framanav .nous_soutenir').attr('target','_blank');
 				
 				// Liens rajoutés sur titre et description des popovers (ergonomie écrans tactiles)
-				f$('#framanav a[rel="popover"]').each(function() {
+				f$('a[rel="popover"]').each(function() {
 					text = f$(this).attr('data-content');
 					title = f$(this).attr('title');
 					link = f$(this).attr('href');
