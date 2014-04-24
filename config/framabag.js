@@ -20,7 +20,7 @@ _paq.push(["trackPageView"]);
 _paq.push(["enableLinkTracking"]);
 
 (function() {
-  var u=(("https:" == document.location.protocol) ? "https" : "http") + "://stats.framasoft.org/";
+  var u="http://stats.framabag.org/";
   _paq.push(["setTrackerUrl", u+"piwik.php"]);
   _paq.push(["setSiteId", "21"]);
   var d=document, g=d.createElement("script"), s=d.getElementsByTagName("script")[0]; g.type="text/javascript";
