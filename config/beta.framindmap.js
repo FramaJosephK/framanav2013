@@ -17,7 +17,7 @@ if(f$_url.indexOf('framindmap.html') > -1) {
 // Si on est dans wisemapping
 
 //  var f$_bootstrap_js = false;
-//  var f$_bootstrap_css = false;
+  var f$_bootstrap_css = false;
   var f$_jquery = 'fQuery';
   var f$_css_position = 'end';
 
