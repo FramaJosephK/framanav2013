@@ -19,6 +19,8 @@ if(f$_url.indexOf('framindmap.html') > -1) {
 //  var f$_bootstrap_js = false;
 //  var f$_bootstrap_css = false;
 
+  var f$_css_position = 'end';
+
   var f$_modal_don_txtdl1 = 'd\'utiliser';
   var f$_modal_don_txtdl2 = 'créer une carte mentale';
   var f$_modal_don_liendl = 'a.btn-large[href*="/framindmap.html"]';
