@@ -1,7 +1,7 @@
 var f$_config = 'local';
 
 var f$_url = window.location.href;
-if(f$_url.indexOf('framindmap.html') > -1) {
+if(f$_url.indexOf('mindmaps/index.html') > -1) {
   var f$_jquery = 'fQuery';
 // Si on n'est dans framindmap
   var f$_nav_extra_css = true;
