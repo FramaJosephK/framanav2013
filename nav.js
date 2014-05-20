@@ -1,3 +1,4 @@
+var f$_version = '140520';
 var f$_site = window.location.host
 f$_site = f$_site.replace(/^(www|test)\./i,"");
 f$_site = f$_site.replace(/\.(com|net|org|fr|pro)$/i,"");
@@ -50,12 +51,19 @@ var f$_start_local_config = function() {
 				console.log('jQuery chargé par HTML');
 				f$_start_jquery();
 			}				
-		} else {
+		} else if (f$_jquery == 'fQuery') {
 			if (window.fQuery === undefined) {
 				console.log('fQuery chargé par AJAX - Mode isolé');
 				f$_loadScript(f$_nav+'lib/jquery/fquery.min.js', f$_start_jquery);
 			} else {
 				console.log('fQuery chargé par HTML');
+				f$_start_jquery();
+			}
+		} else {
+			if (window.jQuery === undefined) {
+				console.log('Pas de jQuery :-( ');
+			} else {
+				console.log('jQuery chargé par HTML - version '+window.jQuery.fn.jquery);
 				f$_start_jquery();
 			}
 		}
@@ -65,17 +73,20 @@ var f$_start_local_config = function() {
 }
 
 
-f$_loadScript(f$_nav+'config/config.js?140211', f$_start_global_config);
+f$_loadScript(f$_nav+'config/config.js?'+f$_version, f$_start_global_config);
 
 
 function f$_start_jquery() {
 	console.log('Ok '+f$_jquery);
-	if (f$_jquery == 'jQuery') {
-		var f$ = (f$_jquery_noconflict) ? jQuery.noConflict() : jQuery;
-	} else {
+	if (f$_jquery == 'fQuery') {
 		var f$ = (f$_jquery_noconflict) ? fQuery.noConflict() : fQuery;
+	} else {
+		var f$ = (f$_jquery_noconflict) ? jQuery.noConflict() : jQuery;
 	}
 	
+	/*
+	 * CSS 
+	 */
 	// On charge bootstrap css d'abord sans attendre le DOM (à l'ancienne, sans jquery)
 	if (f$_bootstrap_css) {
 		var f$_bootstrap_link = document.createElement('link');
@@ -92,6 +103,24 @@ function f$_start_jquery() {
 	} else {
 		console.info('bootstrap.min.css désactivé');
 	}
+
+	// On charge nav.css
+	var f$_nav_css_link = document.createElement('link');
+	    f$_nav_css_link.rel = "stylesheet";
+    	    f$_nav_css_link.media="screen";
+    	    f$_nav_css_link.href= f$_nav+'nav.css?'+f$_version;
+	document.getElementById('nav_js').parentNode.insertBefore(f$_nav_css_link, document.getElementById('nav_js').nextSibling);
+	console.log('Ok nav.css');
+
+	// On charge extra.css
+	if(f$_nav_extra_css) {
+		var f$_extra_css_link = document.createElement('link');
+		    f$_extra_css_link.rel = "stylesheet";
+    		    f$_extra_css_link.media="screen";
+    		    f$_extra_css_link.href= f$_nav+'config/'+f$_site+'_extra.css';
+		document.getElementById('nav_js').parentNode.insertBefore(f$_extra_css_link, document.getElementById('nav_js').nextSibling);
+		console.log('Ok extra.css');
+	}
 	
 	f$(document).ready(function() {
 		// On charge ensuite le code HTML
@@ -102,11 +131,7 @@ function f$_start_jquery() {
 		.fail(function() {
 			console.error('nav.html');
 		})			
-		.done(function(html) {				
-			// Import de nav.css
-			f$('script[src$="nav/nav.js"]').after('<link rel="stylesheet" type="text/css" href="'+f$_nav+'nav.css?140211" />');
-			console.log('Ok nav.css');
-			
+		.done(function(html) {
 			// On ajoute le viewport si Responsive
 			if (f$_responsive) {
 				f$('head').append('<meta name="viewport" content="width=device-width, initial-scale=1.0">');				
@@ -124,19 +149,18 @@ function f$_start_jquery() {
 			});
 		
 			if (f$_bootstrap_js) {
-				if (typeof f$().modal == 'function') { 
+				if (typeof f$().modal == 'function' || f$_bootstrap_js == 'html') { 
 					console.log('Ok Bootstrap actif (html)');
 					go_BootStrap();
 				} else {
-					console.log('Ok Bootstrap actif (ajax)');
-					if (f$_jquery == 'jQuery') {
-						f$.getScript(f$_nav+'lib/bootstrap/js/bootstrap.min.js', function() {
-							console.log('Ok bootstrap.min.js');
+					if (f$_jquery == 'fQuery') {
+						f$.getScript(f$_nav+'lib/bootstrap/js/fbootstrap.min.js', function() {
+							console.log('Ok Bootstrap actif (ajax) fbootstrap.min.js');
 							go_BootStrap();
 						});
 					} else {
-						f$.getScript(f$_nav+'lib/bootstrap/js/fbootstrap.min.js', function() {
-							console.log('Ok fbootstrap.min.js');
+						f$.getScript(f$_nav+'lib/bootstrap/js/bootstrap.min.js', function() {
+							console.log('Ok Bootstrap actif (ajax) bootstrap.min.js');
 							go_BootStrap();
 						});
 					}
@@ -396,10 +420,7 @@ function f$_start_jquery() {
 						console.log('Ok extra.js');
 					});
 				}
-				if(f$_nav_extra_css) {
-					f$('script[src$="nav/nav.js"]').after('<link rel="stylesheet" type="text/css" href="'+f$_nav+'config/'+f$_site+'_extra.css" />');
-					console.log('Ok extra.css');
-				}
+				
 			}
 		});
 	});
@@ -407,10 +428,10 @@ function f$_start_jquery() {
 
 /************** Fonctions globales ****************/
 function p_donationsTimer(t) {
-	if(f$_jquery=='jQuery') {
-		if (t) jQuery('#framanav_donation').fadeOut(600).fadeIn(600);
-	} else {
+	if(f$_jquery=='fQuery') {
 		if (t) fQuery('#framanav_donation').fadeOut(600).fadeIn(600);
+	} else {
+		if (t) jQuery('#framanav_donation').fadeOut(600).fadeIn(600);
 	}
 	t = f$_donate_blink_time + Math.floor(Math.random()*f$_donate_blink_time); 
 	setTimeout('p_donationsTimer(1)',t);
