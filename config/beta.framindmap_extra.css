@@ -8,6 +8,10 @@ box-sizing: content-box !important;
   margin-top:42px;
 }
 
+#pageContainer #headerToolbar {
+  margin-top:-35px;
+}
+
 #headerContent {
   height:30px;
   margin-top:35px;
