@@ -2,8 +2,8 @@ var f$_config = 'local';
 
 var f$_url = window.location.href;
 if(f$_url.indexOf('framindmap.org/mindmaps') > -1) {
+/* Si on n'est dans Mindmaps */
   var f$_jquery = 'fQuery';
-// Si on n'est dans framindmap
   var f$_nav_extra_css = true;
 
 // Force la désactivation des fenêtres modales, du bandeau et du macaron
@@ -14,18 +14,21 @@ if(f$_url.indexOf('framindmap.org/mindmaps') > -1) {
 
 } else {
 
-// Si on est dans wisemapping
+/* Si on est dans Wisemapping */
 
-//  var f$_bootstrap_js = false;
+// Wisemapping utilise déjà bootstrap mais il manque certains composants.
+// Il faut remplacer en dur le fichier bootstrap.min.js de wisemapping (3.1.1) par celui de la nav (3.0.0)
+  var f$_bootstrap_js = 'html'; 
   var f$_bootstrap_css = false;
-  var f$_jquery = 'fQuery';
-  var f$_css_position = 'end';
+// jQuery est déjà présent en version 2.1.0 mais ça marche
+  var f$_jquery = 'html';
 
+// Popup « faire un don » pour utiliser Mindmaps
   var f$_modal_don_txtdl1 = 'd\'utiliser';
   var f$_modal_don_txtdl2 = 'créer une carte mentale';
   var f$_modal_don_liendl = 'a.btn-large[href*="/framindmap.html"]';
   
-  var f$_video_js = true;
+//  var f$_video_js = true;
 
 }
 
