@@ -22,6 +22,8 @@ if(f$_url.indexOf('framindmap.org/mindmaps') > -1) {
   var f$_bootstrap_css = false;
 // jQuery est déjà présent en version 2.1.0 mais ça marche
   var f$_jquery = 'html';
+  
+  var f$_nav_extra_css = true;
 
 // Popup « faire un don » pour utiliser Mindmaps
   var f$_modal_don_txtdl1 = 'd\'utiliser';
