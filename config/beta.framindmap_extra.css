@@ -1,4 +1,4 @@
-*, *:before, *:after {
+#mindmaps *, #mindmaps *:before, #mindmaps *:after {
 -webkit-box-sizing: content-box !important;
 -moz-box-sizing: content-box !important;
 box-sizing: content-box !important;
@@ -6,4 +6,23 @@ box-sizing: content-box !important;
 
 #headerToolbar {
   margin-top:42px;
+}
+
+#headerContent {
+  height:30px;
+  margin-top:35px;
+}
+
+#headerContent a {
+  text-decoration:none;
+}
+
+#headerContent h1 {
+  font-family: "DejaVu Sans","Verdana","Geneva","sans serif";
+  font-weight: bold;
+  font-size:50px
+}
+
+#headerSlogan {
+  display:none;
 }
