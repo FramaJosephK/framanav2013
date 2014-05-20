@@ -31,3 +31,4 @@ box-sizing: content-box !important;
 
 #headerSlogan { display:none;}
 #header { border-bottom:none;}
+#headerAction {margin-right: 80px;}
