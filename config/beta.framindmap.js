@@ -14,11 +14,17 @@ if(f$_url.indexOf('framindmap.org/mindmaps') > -1) {
 
 } else if(f$_url.indexOf('/edit') > -1) {
 /* Si on est dans l'éditeur de Wisemapping */
-  var f$_bootstrap_js = true; 
-  var f$_bootstrap_css = false;
+//  var f$_bootstrap_js = true; 
+//  var f$_bootstrap_css = true;
 
-  var f$_jquery = 'html';
-
+  var f$_jquery = 'fQuery';
+  var f$_nav_extra_css = true;
+  
+  var f$_alert_text = '';
+  var f$_alert_modal_text = '';
+  var f$_modal_don_liendl = '';
+  var f$_donate = false;
+  
 } else {
 // Sur les autres pages, Wisemapping utilise déjà bootstrap mais il manque certains composants.
 // Il faut remplacer en dur le fichier bootstrap.min.js de wisemapping (3.1.1) par celui de la nav (3.0.0)
