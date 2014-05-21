@@ -21,11 +21,12 @@ if(f$_url.indexOf('framindmap.org/mindmaps') > -1) {
   var f$_jquery = 'html';
   
   var f$_nav_extra_css = true;
+  var f$_nav_extra_js = true;
 
 // Popup « faire un don » pour utiliser Mindmaps
   var f$_modal_don_txtdl1 = 'd\'utiliser';
   var f$_modal_don_txtdl2 = 'créer une carte mentale';
-  var f$_modal_don_liendl = 'a.btn-large[href*="/framindmap.html"]';
+  var f$_modal_don_liendl = 'a.btn[href*="/framindmap.html"]';
   
   var f$_video_js = true;
 
