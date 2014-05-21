@@ -27,7 +27,7 @@ if(f$_url.indexOf('framindmap.org/mindmaps') > -1) {
   var f$_modal_don_txtdl2 = 'créer une carte mentale';
   var f$_modal_don_liendl = 'a.btn-large[href*="/framindmap.html"]';
   
-//  var f$_video_js = true;
+  var f$_video_js = true;
 
 }
 
