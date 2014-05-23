@@ -1,12 +1,14 @@
 var f$_config = 'local';
 
+var jquery = 'fQuery';
+
 /** Piwik **/
 var _paq = _paq || [];
 _paq.push(["trackPageView"]);
 _paq.push(["enableLinkTracking"]);
 
 (function() {
-  var u="http://stats.framabag.org/";
+  var u="http://stats.framasphere.org/";
   _paq.push(["setTrackerUrl", u+"piwik.php"]);
   _paq.push(["setSiteId", "26"]);
   var d=document, g=d.createElement("script"), s=d.getElementsByTagName("script")[0]; g.type="text/javascript";
