@@ -8,23 +8,14 @@ var f$_url = window.location.href;
 if(f$_url == 'http://www.framasoft.net/' || f$_url.indexOf('framasoft.net/accueil') > -1) {
   var f$_alert_type = 'info';
   var f$_rand = Math.random();
-	if (f$_rand < .5){
-  // April
+	
+  // CLibre.eu
     var f$_alert_text =
-  '<div style="text-align:center"><a href="http://april.org/campagne">'+
-  '<img width="580" height="76"'+
-  'src="http://april.org/campagne/images/priorite-logiciel-libre-je-soutiens-april.png"'+
-  'alt="Priorité au Logiciel Libre! Je soutiens l’April." />'+
+  '<div style="text-align:center"><a href="http://fr.ulule.com/adopte-le-libre/">'+
+  '<img width="468" height="60"'+
+  'src="http://www.clibre.eu/wp-content/uploads/cLibre.eu-banniere-campagne.gif"'+
+  'alt="Campagne de don CLibre.eu" />'+
   '</a></div>';
-	} else {
-  // Racketiciel
-    var f$_alert_text =
-  '<div style="text-align:center"><a href="http://racketware.info/petition/click/fr">'+
-  '<img width="580" height="76"'+
-  'src="https://lut.im/7hdUqDi1/l4HdUJqf"'+
-  'alt="Informatique : choisissez avant de payer, signez la pétition !" title="Informatique : choisissez avant de payer, signez la pétition !" />'+
-  '</a></div>';
-	}
 }
 
 
