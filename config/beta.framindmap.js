@@ -22,6 +22,9 @@ if(f$_url.indexOf('framindmap.org/mindmaps') > -1) {
   
   var f$_nav_extra_css = true;
 
+// Opt-in
+  var f$_email_field1 = '#user #email';
+
 // Popup « faire un don » pour utiliser Mindmaps
   var f$_modal_don_txtdl1 = 'd\'utiliser';
   var f$_modal_don_txtdl2 = 'créer une carte mentale';
