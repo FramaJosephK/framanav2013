@@ -2,6 +2,8 @@ var f$_config = 'local';
 
 var f$_jquery = 'fQuery';
 
+var f$_accessible = true;
+
 var f$_css_position = 'start';
 
 /** Piwik **/
