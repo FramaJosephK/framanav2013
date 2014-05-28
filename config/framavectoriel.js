@@ -6,7 +6,7 @@ var f$_url = window.location.href;
 if(f$_url.indexOf('svg-editor') > -1) {
 // Si on n'est dans svg-editor
   if (f$_not_in_frame) {
-    var f$_nav_extra_css = true;
+    var f$_extra_css = true;
   } else {
      var f$_bootstrap_css = false;
   }
