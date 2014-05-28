@@ -3,7 +3,7 @@ var f$_config = 'local';
 var f$_jquery = 'fQuery';
 
 if (f$_not_in_frame) {
-  var f$_nav_extra_css = true;
+  var f$_extra_css = true;
 } else {
   var f$_bootstrap_css = false;
 }
