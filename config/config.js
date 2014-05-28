@@ -1,7 +1,7 @@
 var f$_config = 'global'; 							// Paramètre pour vérifier si la config est chargée 
 													// ("global" ici, "local" sur config par site)
 var f$_jquery = 'jQuery'; 							// jQuery = jQuery de la nav ; fQuery = jQuery de la nav avec variables renommées pour éviter les conflits ; html = jQuery (1.10.2 ou +) présent dans la page
-var f$_jquery_noconflict = false;                   // Pas utile normalement
+var f$_jquery_noconflict = false;                                               // Pas utile normalement
 
 var f$_cache = true;								// Obligatoire en prod
 
@@ -9,13 +9,13 @@ var f$_bootstrap_js = true;							// true ; false ; html
 var f$_bootstrap_css = true;
 
 var f$_css_position = 'start';						// 'start' = head > bootstrap.css > ... > nav.js > ... > /head ;
-													// 'next'  = head > ... > nav.js > bootstrap.css > ... > /head ;
-													// 'end'   = head > ... > nav.js > ... > bootstrap.css > /head ;
+									// 'next'  = head > ... > nav.js > bootstrap.css > ... > /head ;
+									// 'end'   = head > ... > nav.js > ... > bootstrap.css > /head ;
 
 var f$_responsive = true;
-var f$_accessible = false;
+var f$_accessible = true;
 
-var f$_nav_static = false;							// Pas encore implémenté correctement
+var f$_nav_static = false;				         	    // Pas encore implémenté correctement
 var f$_extra_css = false;						    // nav/config/nom-de-domaine_extra.css
 var f$_extra_js = false;						    // nav/config/nom-de-domaine_extra.js
 
