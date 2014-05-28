@@ -4,7 +4,7 @@ var f$_url = window.location.href;
 if(f$_url.indexOf('framindmap.org/mindmaps') > -1) {
 /* Si on n'est dans Mindmaps */
   var f$_jquery = 'fQuery';
-  var f$_nav_extra_css = true;
+  var f$_extra_css = true;
 
 // Force la désactivation des fenêtres modales, du bandeau et du macaron
   var f$_alert_text = '';
@@ -20,7 +20,7 @@ if(f$_url.indexOf('framindmap.org/mindmaps') > -1) {
 // jQuery est déjà présent en version 2.1.0 mais ça marche
   var f$_jquery = 'html';
   
-  var f$_nav_extra_css = true;
+  var f$_extra_css = true;
 
 // Opt-in
   var f$_email_field1 = '#user #email';
