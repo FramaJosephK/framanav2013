@@ -2,7 +2,7 @@ var f$_config = 'local';
 
 var f$_jquery = 'fQuery';
 
-var f$_nav_extra_css = true;
+var f$_extra_css = true;
 
 // Force la désactivation des fenêtres modales, du bandeau et du macaron
 var f$_alert_text = '';
