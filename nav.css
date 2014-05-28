@@ -98,7 +98,11 @@ a#framanav_donation { /* don.png */
 }
 a#framanav_donation:hover {filter:alpha(opacity=80);-moz-opacity:0.8;-khtml-opacity: 0.8;opacity: 0.8;}
 
-#framanav .navbar-brand { font-weight: bold; padding-left:50px}
+#framanav .navbar-brand { 
+	font-weight: bold;
+	padding-left:50px;
+	height: 20px;
+}
 
 #framanav .nav-brand img {border:none;}
 
