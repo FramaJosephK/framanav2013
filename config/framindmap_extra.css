@@ -3,3 +3,4 @@
 	-moz-box-sizing: content-box !important;
 	box-sizing: content-box !important;
 }
+#framanav .navbar-brand { height:10px };
