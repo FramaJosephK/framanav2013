@@ -7,7 +7,7 @@ var f$_jquery = 'fQuery';
 
 var f$_css_position = 'end';						
 
-var f$_nav_extra_css = true;
+var f$_extra_css = true;
 
 /** Piwik **/
 var _paq = _paq || [];
