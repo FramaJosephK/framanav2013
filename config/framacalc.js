@@ -11,7 +11,7 @@ if(f$_url.indexOf('framacalc.org/_start') > -1) {
  var f$_jquery ='fQuery';
 // Si on n'est dans ethercalc
   if (f$_not_in_frame) {
-    var f$_nav_extra_css = true;
+    var f$_extra_css = true;
   } else {
     var f$_bootstrap_css = false;
   }
