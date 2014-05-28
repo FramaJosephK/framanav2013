@@ -1,11 +1,11 @@
 var f$_config = 'global'; 							// Paramètre pour vérifier si la config est chargée 
 													// ("global" ici, "local" sur config par site)
-var f$_jquery = 'jQuery'; 							// jQuery ; fQuery ;
-var f$_jquery_noconflict = false;
+var f$_jquery = 'jQuery'; 							// jQuery = jQuery de la nav ; fQuery = jQuery de la nav avec variables renommées pour éviter les conflits ; html = jQuery (1.10.2 ou +) présent dans la page
+var f$_jquery_noconflict = false;                   // Pas utile normalement
 
-var f$_cache = true;
+var f$_cache = true;								// Obligatoire en prod
 
-var f$_bootstrap_js = true;
+var f$_bootstrap_js = true;							// true ; false ; html
 var f$_bootstrap_css = true;
 
 var f$_css_position = 'start';						// 'start' = head > bootstrap.css > ... > nav.js > ... > /head ;
@@ -13,10 +13,11 @@ var f$_css_position = 'start';						// 'start' = head > bootstrap.css > ... > na
 													// 'end'   = head > ... > nav.js > ... > bootstrap.css > /head ;
 
 var f$_responsive = true;
+var f$_accessible = false;
 
 var f$_nav_static = false;							// Pas encore implémenté correctement
-var f$_nav_extra_css = false;						// nav/config/nom-de-domaine_extra.css
-var f$_nav_extra_js = false;						// nav/config/nom-de-domaine_extra.js
+var f$_extra_css = false;						    // nav/config/nom-de-domaine_extra.css
+var f$_extra_js = false;						    // nav/config/nom-de-domaine_extra.js
 
 // Popup de don
 var f$_modal_don_txtdl1 = 'de télécharger';

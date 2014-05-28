@@ -90,9 +90,11 @@ function f$_start_jquery() {
 	// On charge bootstrap css d'abord sans attendre le DOM (à l'ancienne, sans jquery)
 	if (f$_bootstrap_css) {
 		var f$_bootstrap_link = document.createElement('link');
+		f$_bootstrap_link.id = "nav_bs_css";
 		f$_bootstrap_link.rel = "stylesheet";
 		f$_bootstrap_link.media="screen";
-		f$_bootstrap_link.href= f$_nav+"lib/bootstrap/css/bootstrap.min.css";    
+		f$_bootstrap_link.href= f$_nav+"lib/bootstrap/css/bootstrap.min.css";
+		
 
 		switch (f$_css_position) {
 			case 'start' : document.getElementsByTagName('head')[0].insertBefore(f$_bootstrap_link, document.getElementsByTagName('head')[0].firstChild);break;
@@ -100,6 +102,18 @@ function f$_start_jquery() {
 			case 'end' : document.getElementsByTagName('head')[0].appendChild(f$_bootstrap_link);break;
 		}
 		console.log('Ok bootstrap.min.css');
+		
+		if(f$_accessible) {
+			var f$_accessibility_link = document.createElement('link');
+			f$_accessibility_link.rel = "stylesheet";
+			f$_accessibility_link.media="screen";
+			f$_accessibility_link.href= f$_nav+"lib/bootstrap/css/bootstrap-accessibility.css";    
+
+			document.getElementById('nav_bs_css').parentNode.insertBefore(f$_accessibility_link, document.getElementById('nav_bs_css').nextSibling);
+			console.log('Ok accessibility.css');
+		}
+		
+		
 	} else {
 		console.info('bootstrap.min.css désactivé');
 	}
@@ -113,7 +127,7 @@ function f$_start_jquery() {
 	console.log('Ok nav.css');
 
 	// On charge extra.css
-	if(f$_nav_extra_css) {
+	if(f$_extra_css) {
 		var f$_extra_css_link = document.createElement('link');
 		    f$_extra_css_link.rel = "stylesheet";
     		    f$_extra_css_link.media="screen";
@@ -123,10 +137,11 @@ function f$_start_jquery() {
 	}
 	
 	f$(document).ready(function() {
+		f$.ajaxSetup({ cache: f$_cache });
+		
 		// On charge ensuite le code HTML
 		f$.ajax({
 			url: f$_nav+'nav.html',
-			cache: f$_cache
 		})
 		.fail(function() {
 			console.error('nav.html');
@@ -227,6 +242,18 @@ function f$_start_jquery() {
 			/** On peut ajouter des scripts jQuery "génériques" ici mais... **/
 			
 			function go_BootStrap() {
+				if(f$_accessible) {
+					if (f$_jquery == 'fQuery') {
+						f$.getScript(f$_nav+'lib/bootstrap/js/fbootstrap-accessibility.min.js', function() {
+							console.log('Ok accessibility.min.js');
+						});
+					} else {
+						f$.getScript(f$_nav+'lib/bootstrap/js/bootstrap-accessibility.min.js', function() {
+							console.log('Ok accessibility.min.js');
+						});
+					}
+				}
+				
 			if (f$_not_in_frame) { // Pas de bandeau, nav, modale et macaron en mode iframe
 				f$('#framanav').fadeIn('slow');
 				
@@ -316,7 +343,7 @@ function f$_start_jquery() {
 			
 				// Fenêtre modal pour dons sur téléchargements
 				if (f$_modal_don_liendl!='') {
-					f$('body').append(
+					f$(f$_modal_don_liendl).after(
 					'<div class="modal fade" id="modal-soutenir">'+
 						'<div class="modal-dialog">'+
 							'<div class="modal-content">'+
@@ -325,7 +352,7 @@ function f$_start_jquery() {
 									'<h3>Soutenez Framasoft</h3>'+
 								'</div>'+
 								'<div class="modal-body">'+
-									'<img src="'+f$_nav+'img/lldemars-framasoft.png" style="float:right;width:150px;margin-left:15px" alt="" />'+
+									'<div id="lldemars-framasoft"></div>'+
 									'<p>Vous êtes sur le point '+f$_modal_don_txtdl1+' une ressource <b>libre</b> issue de la vingtaine de projets du réseau Framasoft.</p>'+
 									'<p>Cette ressource est <b>gratuite</b> (et le sera tant que nous existerons) parce que <b>Framasoft est une association d\'intérêt général à but non lucratif</b> dont l\'objectif est justement la diffusion du logiciel libre et sa culture au plus large public.'+
 									'<p>Mais tout ceci est rendu possible parce que Framasoft est <b>soutenue par les dons (défiscalisables) de ses utilisateurs</b>.</p>'+
@@ -415,7 +442,7 @@ function f$_start_jquery() {
 				}
 			}
 					
-				if(f$_nav_extra_js) {
+				if(f$_extra_js) {
 					f$.getScript(f$_nav+'config/'+f$_site+'_extra.js', function() {
 						console.log('Ok extra.js');
 					});
