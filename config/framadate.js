@@ -9,7 +9,7 @@ var f$_url = window.location.href;
 if(f$_url.indexOf('infos_sondage.php?choix_sondage') > -1) {
   f$_email_field1 = '#formulaire input[name="adresse"]';
   
-  var f$_nav_extra_css = true;
+  var f$_extra_css = true;
 }
 
 /** Piwik **/
