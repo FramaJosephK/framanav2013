@@ -288,12 +288,12 @@ function f$_start_jquery() {
 				// Ajout de la fenêtre modale
 				if (f$_alert_modal_text!='') {
 					f$('body').append(
-					'<div class="modal fade" id="modal-alert">'+
+					'<div class="modal fade" id="modal-alert" tabindex="-1" role="dialog" aria-labelledby="modal-alertLabel" aria-hidden="true">'+
 						'<div class="modal-dialog">'+
 							'<div class="modal-content">'+
 								'<div class="modal-header">'+
 									'<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>'+
-									'<h3>'+f$_alert_modal_title+'</h3>'+
+									'<h3 id="modal-alertLabel">'+f$_alert_modal_title+'</h3>'+
 								'</div>'+
 								'<div class="modal-body">'+f$_alert_modal_text+'</div>'+
 								'<div class="modal-footer">'+
@@ -343,13 +343,13 @@ function f$_start_jquery() {
 			
 				// Fenêtre modal pour dons sur téléchargements
 				if (f$_modal_don_liendl!='') {
-					f$(f$_modal_don_liendl).after(
-					'<div class="modal fade" id="modal-soutenir">'+
+					f$('body').append(
+					'<div class="modal fade" id="modal-soutenir" tabindex="-1" role="dialog" aria-labelledby="modal-soutenirLabel" aria-hidden="true">'+
 						'<div class="modal-dialog">'+
 							'<div class="modal-content">'+
 								'<div class="modal-header">'+
 									'<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>'+
-									'<h3>Soutenez Framasoft</h3>'+
+									'<h3 id="modal-soutenirLabel">Soutenez Framasoft</h3>'+
 								'</div>'+
 								'<div class="modal-body">'+
 									'<div id="lldemars-framasoft"></div>'+
