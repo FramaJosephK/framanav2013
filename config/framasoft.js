@@ -3,19 +3,17 @@ var f$_config = 'local';
 // Opt-in
 var f$_email_field1 = '#email_auteur';
 
-// Bandeau APRIL
+// Bandeau
 var f$_url = window.location.href;
 if(f$_url == 'http://www.framasoft.net/' || f$_url.indexOf('framasoft.net/accueil') > -1) {
-  var f$_alert_type = 'info';
   var f$_rand = Math.random();
 	
-  // CLibre.eu
-    var f$_alert_text =
-  '<div style="text-align:center"><a href="http://fr.ulule.com/adopte-le-libre/">'+
-  '<img width="468" height="60"'+
-  'src="http://www.clibre.eu/wp-content/uploads/cLibre.eu-banniere-campagne.gif"'+
-  'alt="Campagne de don CLibre.eu" />'+
-  '</a></div>';
+  // MyPads
+  var f$_alert_type = 'warning'; // warning = jaune ; danger = rouge ; info = bleu ; success = vert
+  var f$_alert_cookie = 24*60*60*1000;	// durée d'expiration du cookie en milliseconde
+  var f$_alert_text = '<p style="max-width:900px; font-weight:bold; margin:0 auto; text-align:center">Soutenez <a href="http://www.ulule.com/etherpad-framapad">la campagne de financement participatif « MyPads »</a>, lancée par Framasoft,<br />'+
+                    ' pour la création d’un formidable plugin pour Etherpad/Framapad !<p>';	
+
 }
 
 
