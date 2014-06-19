@@ -14,6 +14,11 @@ if(f$_url == 'http://www.framasoft.net/' || f$_url.indexOf('framasoft.net/accuei
   var f$_alert_text = '<p style="max-width:900px; font-weight:bold; margin:0 auto; text-align:center">Soutenez <a href="http://www.ulule.com/etherpad-framapad">la campagne de financement participatif « MyPads »</a>, lancée par Framasoft,<br />'+
                     ' pour la création d’un formidable plugin pour Etherpad/Framapad !<p>';	
 
+} else {
+  // Mise en forme « Juste une image »
+  var flickr_t = jQuery('img[src$="_t.jpg"]').attr('src');
+  var flickr_m = flickr_t.replace('_t.jpg', '_m.jpg');
+  jQuery('img[src$="_t.jpg"]').attr('src', flickr_m).css('width', '90%');
 }
 
 
