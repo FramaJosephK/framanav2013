@@ -1,4 +1,4 @@
-var f$_version = '140520';
+var f$_version = '140619';
 var f$_site = window.location.host
 f$_site = f$_site.replace(/^(www|test)\./i,"");
 f$_site = f$_site.replace(/\.(com|net|org|fr|pro)$/i,"");
@@ -199,18 +199,27 @@ function f$_start_jquery() {
 			}
 			
 			// Video JS
-			if (f$_video_js) {
-				f$('#nav_js').after('<link rel="stylesheet" type="text/css" href="'+f$_nav+'lib/video-js/video-js.css" />');
-				console.log('Ok video-js.css');
-				f$('video').attr({
-					'class':'video-js vjs-default-skin',
-					'data-setup':'{}'});
-				f$.getScript(f$_nav+'lib/video-js/video.js', function() {
-					console.log('Ok video.js');
-					videojs.options.flash.swf = f$_nav+'lib/video-js/video-js.swf';
-				});
-			}
-			
+                        if (f$_video_js) {
+                                f$('#nav_js').after('<link rel="stylesheet" type="text/css" href="'+f$_nav+'lib/video-js/video-js.css" />');
+                                console.log('Ok video-js.css');
+                                 // Paramètre à ajouter à la vidéo pour appliquer VideoJS en surcouche
+                                f$('video').attr({
+                                        'class':'video-js vjs-default-skin',
+                                        'data-setup':'{}'});
+                                // Numérotation des vidéos (pour pouvoir utiliser l'API : videojs('id').ready() )
+                                f$('video').each(function(index) { f$(this).attr('id','f_video_'+index); });
+
+                                f$.getScript(f$_nav+'lib/video-js/video.js', function() {
+                                        console.log('Ok video.js');
+                                        videojs.options.flash.swf = f$_nav+'lib/video-js/video-js.swf';
+                                        // On "clique" sur les sous-titres Français 
+                                        // pour chaque vidéo dès que VideoJS est prêt
+                                        f$('video').each(function(index) {
+                                                videojs('f_video_'+index).ready(function() { f$("li.vjs-menu-item:contains('Français')").trigger('click'); });
+                                        });
+                                });
+                        }
+
 			// Bloqueur d'iframe style Flashblock
 			var f$_i=0;
 			f$('a[iframe]').click(function() {
