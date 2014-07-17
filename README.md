@@ -5,19 +5,21 @@ Barre de navigation commune aux sites du réseau
 
 Installation
 --------------------
-1. Se placer en ligne de commande dans le dossier du *site* et importer les fichiers du dépôt
-```bash
-	cd /home/site/www
-	git clone https://github.com/framasoft/framanav2013.git nav
-```
-
-2. Créer le fichier config/site.js contenant au moins une ligne 
+1) Créer le fichier config/site.js contenant au moins une ligne 
 ```JavaScript
 	f$_config = 'local';
 ```
 Prendre modèle sur config/config.js pour connaître les paramètres à personnalisables
 
-3. a) Ajouter le script nav.js dans le `<head>` du site où la nav est requise :
+
+2) Se placer en ligne de commande dans le dossier du *site*, importer les fichiers du dépôt et rendre le fichier cron.sh exécutable
+```bash
+	cd /home/site/www
+	git clone https://github.com/framasoft/framanav2013.git nav
+	chmod 744 nav/cron.sh
+```
+
+3) a) Ajouter le script nav.js dans le `<head>` du site où la nav est requise :
 ```HTML
 	<script src="/nav/nav.js" id="nav_js" type="text/javascript"></script>
 ```
@@ -39,8 +41,14 @@ var script = document.createElement('script');
 	<script src="/nav/lib/jquery/jquery.min.js" type="text/javascript"></script>
 	<script src="/nav/lib/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
 ```
+pour utiliser ces versions de jQuery ou Bootstrap avec la nav, mettre dans le fichier de config :
+```JavaScript
+	f$_jquery = 'html';
+	f$_bootstrap_js = 'html';
+```
+
 Si jQuery existe déjà sur le site dans une version antérieure à la 1.10.2 et qu'il y a de nombreuses incompatibilités,
-mettre dans le fichier de config du site
+mettre dans le fichier de config :
 ```JavaScript
 	f$_jquery = 'fQuery';
 ```
