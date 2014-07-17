@@ -59,5 +59,6 @@ Editer le crontab de l'utilisateur :
 ```
 Et ajouter une ligne à la fin
 ```
-	00 4 * * * cd /home/site/www/nav && git pull
+	00 4 * * * /home/site/www/nav/cron.sh
 ```
+
